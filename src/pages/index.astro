@@ -1,11 +1,7 @@
 ---
 // JS logic
 import i18next, { t, changeLanguage } from "i18next";
-import {
-  HeadHrefLangs,
-  LanguageSelector,
-  Trans,
-} from "astro-i18next/components";
+import { HeadHrefLangs, LanguageSelector, Trans, } from "astro-i18next/components";
 
 changeLanguage("en");
 ---
@@ -21,15 +17,17 @@ changeLanguage("en");
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
+	<!-- <script type="text/partytown" src="fancy-analytics.js"></script> -->
+
     <HeadHrefLangs />
   </head>
-  <body>
+  <body class="p-4">
     <h1>
       {t("home.welcome")}
-      <LanguageSelector
+    </h1>
+	<LanguageSelector
         class="mt-2 py-2 px-4 font-semibold bg-transparent hover:bg-gray-50 border-2"
         showFlag={true}
-      />
-    </h1>
+    />
   </body>
 </html>
