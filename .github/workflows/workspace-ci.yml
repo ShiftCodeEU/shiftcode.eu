@@ -9,7 +9,7 @@ on:
 jobs:
     build:
         name: Build and Test
-        timeout-minutes: 5
+        timeout-minutes: 15
         runs-on: ubuntu-latest
 
         steps:
@@ -35,4 +35,5 @@ jobs:
               run: pnpm build
 
             - name: Run Preview
-              run: pnpm build
+              timeout-minutes: 2
+              run: pnpm preview
