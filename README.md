@@ -14,6 +14,8 @@
 
 > Astro website using TypeScript and Tailwind for the shiftcode.eu domain
 
+> Use the following website for free json translations: https://hotpot.ai/file-translator?s=translate-json
+
 ## Install
 
 ```sh
@@ -36,9 +38,9 @@ pnpm run lint
 
 👤 **GlitchTech Developments**
 
--   Website: https://shiftcode.eu
+- Website: https://shiftcode.eu
 <!-- -   Twitter: [@GlitchTechEU](https://twitter.com/GlitchTechEU) -->
--   Github: [@ShiftCodeEU](https://github.com/ShiftCodeEU)
+- Github: [@ShiftCodeEU](https://github.com/ShiftCodeEU)
 
 ## 🤝 Contributing
 
