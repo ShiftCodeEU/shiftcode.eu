@@ -1,0 +1,4 @@
+/* default injected tailwind.css styling */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

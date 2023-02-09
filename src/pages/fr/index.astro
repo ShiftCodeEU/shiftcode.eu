@@ -1,12 +1,19 @@
 ---
 // JS logic
+// possible theme colors: green-300 & violet-500
 import i18next, { t, changeLanguage } from "i18next";
-import { HeadHrefLangs, LanguageSelector, Trans, } from "astro-i18next/components";
+import { HeadHrefLangs } from "astro-i18next/components";
+import LanguageSelector from "../../components/i18n/languageSwitch.astro";
+import "../../styles/tailwind.css";
 
 changeLanguage("fr");
 ---
 
-<html lang={i18next.language}>
+<html
+  lang={i18next.language}
+  class="h-screen bg-gradient-to-br from-violet-500 via-black to-green-300"
+  data-theme="forest"
+>
   <head>
     <title>{t("site.title")}</title>
     <meta name="description" content="" />
@@ -17,7 +24,7 @@ changeLanguage("fr");
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-	<!-- <script type="text/partytown" src="fancy-analytics.js"></script> -->
+    <!-- <script type="text/partytown" src="fancy-analytics.js"></script> -->
 
     <HeadHrefLangs />
   </head>
@@ -25,9 +32,9 @@ changeLanguage("fr");
     <h1>
       {t("home.welcome")}
     </h1>
-	<LanguageSelector
-        class="mt-2 py-2 px-4 font-semibold bg-transparent hover:bg-gray-50 border-2"
-        showFlag={true}
+    <LanguageSelector
+      class="mt-2 py-2 px-4 font-semibold bg-transparent border-2"
+      showFlag={true}
     />
   </body>
 </html>
