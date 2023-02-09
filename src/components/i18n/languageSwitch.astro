@@ -1,13 +1,6 @@
 ---
 import i18next from "i18next";
 import { localizePath } from "astro-i18next";
-
-import nl from "../../../node_modules/flag-icons/flags/nl.svg";
-import de from "../../../node_modules/flag-icons/flags/nl.svg";
-import en from "../../../node_modules/flag-icons/flags/nl.svg";
-import es from "../../../node_modules/flag-icons/flags/nl.svg";
-import fr from "../../../node_modules/flag-icons/flags/nl.svg";
-
 import ISO6991 from "iso-639-1";
 
 export interface Props extends astroHTML.JSX.SelectHTMLAttributes {
@@ -21,27 +14,6 @@ const { pathname } = Astro.url;
 
 const { showFlag = false, ...attributes } = Astro.props;
 
-let image = "";
-
-const GetFlag = (props: { langCode: string }) => { 
-  switch (props.langCode) {
-    case "en": {
-      image = en 
-    }
-    case "nl": {
-      image = nl
-    }
-    case "de": {
-      image = de
-    }
-    case "fr": {
-      image = fr
-    }
-    case "es": {
-      image = es
-    }
-  }
-}
 // Use the following website for free json translations: https://hotpot.ai/file-translator?s=translate-json
 ---
 
@@ -49,13 +21,11 @@ const GetFlag = (props: { langCode: string }) => {
   {
     supportedLanguages.map((supportedLanguage: string) => {
       let value = localizePath(pathname, supportedLanguage);
-      console.log(supportedLanguage);
       const nativeName = ISO6991.getNativeName(supportedLanguage);
       const label = nativeName;
 
       return (
         <option value={value} selected={supportedLanguage === currentLanguage}>
-          {showFlag == true && image !== "" ? <img src={image} alt={supportedLanguage} /> : <></>}
           {label}
         </option>
       );
