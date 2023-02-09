@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@astrojs/compiler': ^1.1.0
   '@astrojs/partytown': ^1.0.3
   '@astrojs/prefetch': ^0.1.2
   '@astrojs/react': ^2.0.2
@@ -14,11 +15,11 @@ specifiers:
   concurrently: ^7.6.0
   cssnano: ^5.1.14
   daisyui: ^2.50.0
-  flag-icons: ^6.6.6
   i18n-auto-translation: ^1.2.1
   i18next: ^22.4.9
   i18next-fs-backend: ^2.1.1
   iso-639-1: ^2.1.15
+  module-alias: ^2.2.2
   postcss: ^8.4.21
   preact: ^10.12.0
   prettier: ^2.8.4
@@ -33,20 +34,21 @@ dependencies:
   '@astrojs/prefetch': 0.1.2
   '@astrojs/react': 2.0.2_fxtgt6bjwd6p4cwoordejim2zi
   '@astrojs/sitemap': 1.0.1
-  '@astrojs/tailwind': 3.0.1_6ijp3tulxrgj3uhcobzhdj7amu
-  astro: 2.0.4
-  astro-i18next: 1.0.0-beta.17_astro@2.0.4
+  '@astrojs/tailwind': 3.0.1_jukmciyu6aodegbctarme2zo2y
+  astro: 2.0.10
+  astro-i18next: 1.0.0-beta.17_astro@2.0.10
   daisyui: 2.50.0_gbtt6ss3tbiz4yjtvdr6fbrj44
-  flag-icons: 6.6.6
   i18next: 22.4.9
   i18next-fs-backend: 2.1.1
   iso-639-1: 2.1.15
-  preact: 10.12.0
+  module-alias: 2.2.2
+  preact: 10.12.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   tailwindcss: 3.2.6_postcss@8.4.21
 
 devDependencies:
+  '@astrojs/compiler': 1.1.0
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
   autoprefixer: 10.4.13_postcss@8.4.21
@@ -93,13 +95,13 @@ packages:
       vscode-uri: 3.0.7
     dev: false
 
-  /@astrojs/markdown-remark/2.0.1_astro@2.0.4:
+  /@astrojs/markdown-remark/2.0.1_astro@2.0.10:
     resolution: {integrity: sha512-xQF1rXGJN18m+zZucwRRtmNehuhPMMhZhi6HWKrtpEAKnHSPk8lqf1GXgKH7/Sypglu8ivdECZ+EGs6kOYVasQ==}
     peerDependencies:
       astro: ^2.0.2
     dependencies:
       '@astrojs/prism': 2.0.0
-      astro: 2.0.4
+      astro: 2.0.10
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.1
       rehype-raw: 6.1.1
@@ -159,17 +161,17 @@ packages:
     resolution: {integrity: sha512-qexepZPH6/dLToI/njxr2FjvyxJU0HBAnQRNzEggF0ok811oSNC6su1DkyW2VKp0TNPbWoujuSbcb1yFOjnAqA==}
     dependencies:
       sitemap: 7.1.1
-      zod: 3.20.4
+      zod: 3.20.6
     dev: false
 
-  /@astrojs/tailwind/3.0.1_6ijp3tulxrgj3uhcobzhdj7amu:
+  /@astrojs/tailwind/3.0.1_jukmciyu6aodegbctarme2zo2y:
     resolution: {integrity: sha512-QSYh/xmz454j1yZU9rjw2J24PpH7j3h2ClesqMaAniOtcuL8RfP7KYCnCrk01xvjwqqO+QBpZNDD/SUhHNtFFg==}
     peerDependencies:
       astro: ^2.0.4
       tailwindcss: ^3.0.24
     dependencies:
       '@proload/core': 0.3.3
-      astro: 2.0.4
+      astro: 2.0.10
       autoprefixer: 10.4.13_postcss@8.4.21
       postcss: 8.4.21
       postcss-load-config: 4.0.1_postcss@8.4.21
@@ -706,7 +708,7 @@ packages:
       '@google-cloud/promisify': 3.0.1
       arrify: 2.0.1
       extend: 3.0.2
-      google-gax: 3.5.6
+      google-gax: 3.5.7
       is-html: 2.0.0
     transitivePeerDependencies:
       - encoding
@@ -718,7 +720,7 @@ packages:
     engines: {node: ^8.13.0 || >=10.10.0}
     dependencies:
       '@grpc/proto-loader': 0.7.4
-      '@types/node': 17.0.45
+      '@types/node': 18.13.0
     dev: true
 
   /@grpc/proto-loader/0.7.4:
@@ -729,7 +731,7 @@ packages:
       '@types/long': 4.0.2
       lodash.camelcase: 4.3.0
       long: 4.0.0
-      protobufjs: 7.2.1
+      protobufjs: 7.2.2
       yargs: 16.2.0
     dev: true
 
@@ -926,7 +928,7 @@ packages:
     resolution: {integrity: sha512-8bVUjXZvJacUFkJXHdyZ9iH1Eaj5V7I8c4NdH5sQJsdXkqT4CA5Dhb4yb4VE/3asyx4L9ayZr1NIhTsWHczmMw==}
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 17.0.45
+      '@types/node': 18.13.0
     dev: true
 
   /@types/hast/2.3.4:
@@ -980,6 +982,11 @@ packages:
 
   /@types/node/17.0.45:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
+    dev: false
+
+  /@types/node/18.13.0:
+    resolution: {integrity: sha512-gC3TazRzGoOnoKAhUx+Q0t8S9Tzs74z7m0ipwGpSqQrleP14hKxP4/JUeEQcD3W1/aIpnWl8pHowI7WokuZpXg==}
+    dev: true
 
   /@types/parse5/6.0.3:
     resolution: {integrity: sha512-SuT16Q1K51EAVPz1K29DJ/sXjhSQ0zjvsypYJ6tlwVsRV9jwW5Adq2ch8Dq8kDBCkYnELS7N7VNCSB5nC56t/g==}
@@ -1008,7 +1015,7 @@ packages:
     resolution: {integrity: sha512-F3OznnSLAUxFrCEu/L5PY8+ny8DtcFRjx7fZZ9bycvXRi3KPTRS9HOitGZwvPg0juRhXFWIeKX58cnX5YqLohQ==}
     dependencies:
       '@types/glob': 8.0.1
-      '@types/node': 17.0.45
+      '@types/node': 18.13.0
     dev: true
 
   /@types/sax/1.2.4:
@@ -1166,7 +1173,7 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /astro-i18next/1.0.0-beta.17_astro@2.0.4:
+  /astro-i18next/1.0.0-beta.17_astro@2.0.10:
     resolution: {integrity: sha512-EyVhwLuNcQoQnte4Gn/2Mj9SuTS7lmWPZFDRF+rrONcBSm/Il3wQv78PaOUWfdE3QjHznYfg8o6RvLuvu6RM4Q==}
     hasBin: true
     peerDependencies:
@@ -1174,7 +1181,7 @@ packages:
     dependencies:
       '@proload/core': 0.3.3
       '@proload/plugin-tsm': 0.2.1_@proload+core@0.3.3
-      astro: 2.0.4
+      astro: 2.0.10
       i18next: 22.4.9
       i18next-browser-languagedetector: 7.0.1
       i18next-fs-backend: 2.1.1
@@ -1186,14 +1193,14 @@ packages:
       - encoding
     dev: false
 
-  /astro/2.0.4:
-    resolution: {integrity: sha512-VSxFONW4hazODUIzjpoPdSZ4eRMz86pQn375277GhJDDRq/kfA5tSfvDFtySlAeEWrsE9W8tC2Jj3HuYcRYRig==}
+  /astro/2.0.10:
+    resolution: {integrity: sha512-Jg2JYPA6Nlip27So1+O0p9VFL98H+LiDLEt+F65e6536LkWE5oiV0fDSbK8aI8hKeCvOQzLiEZiD21eXbug0XQ==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
     dependencies:
       '@astrojs/compiler': 1.1.0
       '@astrojs/language-server': 0.28.3
-      '@astrojs/markdown-remark': 2.0.1_astro@2.0.4
+      '@astrojs/markdown-remark': 2.0.1_astro@2.0.10
       '@astrojs/telemetry': 2.0.0
       '@astrojs/webapi': 2.0.0
       '@babel/core': 7.20.12
@@ -1242,7 +1249,7 @@ packages:
       vite: 4.1.1
       vitefu: 0.2.4_vite@4.1.1
       yargs-parser: 21.1.1
-      zod: 3.20.4
+      zod: 3.20.6
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -1358,7 +1365,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001451
-      electron-to-chromium: 1.4.289
+      electron-to-chromium: 1.4.293
       node-releases: 2.0.10
       update-browserslist-db: 1.0.10_browserslist@4.21.5
 
@@ -1837,7 +1844,7 @@ packages:
     dependencies:
       domelementtype: 2.3.0
       domhandler: 4.3.1
-      entities: 2.1.0
+      entities: 2.2.0
     dev: true
 
   /domelementtype/2.3.0:
@@ -1883,8 +1890,8 @@ packages:
       safe-buffer: 5.2.1
     dev: true
 
-  /electron-to-chromium/1.4.289:
-    resolution: {integrity: sha512-relLdMfPBxqGCxy7Gyfm1HcbRPcFUJdlgnCPVgQ23sr1TvUrRJz0/QPoGP0+x41wOVSTN/Wi3w6YDgHiHJGOzg==}
+  /electron-to-chromium/1.4.293:
+    resolution: {integrity: sha512-h7vBlhC83NsgC9UO3LOZx91xgstIrHk5iqMbZgnEArL5rHTM6HfsUZhnwb3oRnNetXM1741kB9SO7x9jLshz5A==}
 
   /emmet/2.3.6:
     resolution: {integrity: sha512-pLS4PBPDdxuUAmw7Me7+TcHbykTsBKN/S9XJbUOMFQrNv9MoshzyMFK/R57JBm94/6HSL4vHnDeEmxlC82NQ4A==}
@@ -1912,6 +1919,10 @@ packages:
 
   /entities/2.1.0:
     resolution: {integrity: sha512-hCx1oky9PFrJ611mf0ifBLBRW8lUUVRlFolb5gWRfIELabBlbp9xZvrqZLZAs+NxFnbfQoeGd8wDkygjg7U85w==}
+    dev: true
+
+  /entities/2.2.0:
+    resolution: {integrity: sha512-p92if5Nz619I0w+akJrLZH0MX0Pb5DX39XOwQTtXSdQQOaYH03S1uIQp4mhOZtAXrxq4ViO67YTiLBo2638o9A==}
     dev: true
 
   /es-module-lexer/1.1.1:
@@ -2328,10 +2339,6 @@ packages:
       pkg-dir: 4.2.0
     dev: false
 
-  /flag-icons/6.6.6:
-    resolution: {integrity: sha512-4lHDKxldnQ7q617pf9Dx9nAetT+9zcMpUexbRrc9kjLw9KJgZ83zA5Dky3Vv7ZDzUjAiZ46x/cy5P0HnEnqA2A==}
-    dev: false
-
   /follow-redirects/1.15.2:
     resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
     engines: {node: '>=4.0'}
@@ -2515,8 +2522,8 @@ packages:
       - supports-color
     dev: true
 
-  /google-gax/3.5.6:
-    resolution: {integrity: sha512-gw1phnFuVB8Vtad/An9/4cLfhjNCj4FqyqDA0W09r/ZUWe70VZFZ7SNrvQNX81iLoOEjfTPHKEGZL/anuFxU5w==}
+  /google-gax/3.5.7:
+    resolution: {integrity: sha512-taDGwR9Ry5y6NkcPYKe0B3wr7rCwaImZZIuWajUcFe9Y8L71eBtaq0+ZJ62JByzr/2cJkd9EN1rr52rD6V/UDA==}
     engines: {node: '>=12'}
     hasBin: true
     dependencies:
@@ -2532,8 +2539,8 @@ packages:
       node-fetch: 2.6.9
       object-hash: 3.0.0
       proto3-json-serializer: 1.1.0
-      protobufjs: 7.2.1
-      protobufjs-cli: 1.1.1_protobufjs@7.2.1
+      protobufjs: 7.2.2
+      protobufjs-cli: 1.1.1_protobufjs@7.2.2
       retry-request: 5.0.2
     transitivePeerDependencies:
       - encoding
@@ -3585,6 +3592,10 @@ packages:
     hasBin: true
     dev: true
 
+  /module-alias/2.2.2:
+    resolution: {integrity: sha512-A/78XjoX2EmNvppVWEhM2oGk3x4lLxnkEA4jTbaK97QKSDjkIoOsKQlfylt/d3kKKi596Qy3NP5XrXJ6fZIC9Q==}
+    dev: false
+
   /mri/1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
     engines: {node: '>=4'}
@@ -4194,8 +4205,8 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
-  /preact/10.12.0:
-    resolution: {integrity: sha512-+w8ix+huD8CNZemheC53IPjMUFk921i02o30u0K6h53spMX41y/QhVDnG/nU2k42/69tvqWmVsgNLIiwRAcmxg==}
+  /preact/10.12.1:
+    resolution: {integrity: sha512-l8386ixSsBdbreOAkqtrwqHwdvR35ID8c3rKPa8lCWuO86dBi32QWHV4vfsZK1utLLFMvw+Z5Ad4XLkZzchscg==}
     dev: false
 
   /preferred-pm/3.0.3:
@@ -4259,10 +4270,10 @@ packages:
     resolution: {integrity: sha512-SjXwUWe/vANGs/mJJTbw5++7U67nwsymg7qsoPtw6GiXqw3kUy8ByojrlEdVE2efxAdKreX8WkDafxvYW95ZQg==}
     engines: {node: '>=12.0.0'}
     dependencies:
-      protobufjs: 7.2.1
+      protobufjs: 7.2.2
     dev: true
 
-  /protobufjs-cli/1.1.1_protobufjs@7.2.1:
+  /protobufjs-cli/1.1.1_protobufjs@7.2.2:
     resolution: {integrity: sha512-VPWMgIcRNyQwWUv8OLPyGQ/0lQY/QTQAVN5fh+XzfDwsVw1FZ2L3DM/bcBf8WPiRz2tNpaov9lPZfNcmNo6LXA==}
     engines: {node: '>=12.0.0'}
     hasBin: true
@@ -4276,14 +4287,14 @@ packages:
       glob: 8.1.0
       jsdoc: 4.0.0
       minimist: 1.2.7
-      protobufjs: 7.2.1
+      protobufjs: 7.2.2
       semver: 7.3.8
       tmp: 0.2.1
       uglify-js: 3.17.4
     dev: true
 
-  /protobufjs/7.2.1:
-    resolution: {integrity: sha512-L3pCItypTnPK27+CS8nuhZMYtsY+i8dqdq2vZsYHlG17CnWp1DWPQ/sos0vOKrj1fHEAzo3GBqSHLaeZyKUCDA==}
+  /protobufjs/7.2.2:
+    resolution: {integrity: sha512-++PrQIjrom+bFDPpfmqXfAGSQs40116JRrqqyf53dymUMvvb5d/LMRyicRoF1AUKoXVS1/IgJXlEgcpr4gTF3Q==}
     engines: {node: '>=12.0.0'}
     requiresBuild: true
     dependencies:
@@ -4297,7 +4308,7 @@ packages:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
-      '@types/node': 17.0.45
+      '@types/node': 18.13.0
       long: 5.2.1
     dev: true
 
@@ -4656,7 +4667,6 @@ packages:
   /source-map/0.6.1:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
-    requiresBuild: true
     dev: true
 
   /source-map/0.7.4:
@@ -5358,8 +5368,8 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /zod/3.20.4:
-    resolution: {integrity: sha512-Wz4JH7/HWMe6RcU4/vZ+3k/8YQGoYM4RhaWWq5l/kjzmGX2YLXfZ/aDHxx4HCaGxOz9D+9Y42zAP92tQS5Berg==}
+  /zod/3.20.6:
+    resolution: {integrity: sha512-oyu0m54SGCtzh6EClBVqDDlAYRz4jrVtKwQ7ZnsEmMI9HnzuZFj8QFwAY1M5uniIYACdGvv0PBWPF2kO0aNofA==}
     dev: false
 
   /zwitch/2.0.4:

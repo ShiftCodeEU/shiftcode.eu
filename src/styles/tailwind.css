@@ -2,3 +2,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-gradient-shiftcode {
+	background: rgb(139, 92, 246);
+	background: -moz-linear-gradient(
+		90deg,
+		rgba(139, 92, 246, 1) 0%,
+		rgba(0, 0, 0, 1) 5%,
+		rgba(0, 0, 0, 1) 95%,
+		rgba(74, 222, 128, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		rgba(139, 92, 246, 1) 0%,
+		rgba(0, 0, 0, 1) 5%,
+		rgba(0, 0, 0, 1) 95%,
+		rgba(74, 222, 128, 1) 100%
+	);
+	background: linear-gradient(
+		90deg,
+		rgba(139, 92, 246, 1) 0%,
+		rgba(0, 0, 0, 1) 5%,
+		rgba(0, 0, 0, 1) 95%,
+		rgba(74, 222, 128, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8b5cf6",endColorstr="#4ade80",GradientType=1);
+}
