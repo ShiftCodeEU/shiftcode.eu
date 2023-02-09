@@ -9,7 +9,6 @@ import es from "../../../node_modules/flag-icons/flags/nl.svg";
 import fr from "../../../node_modules/flag-icons/flags/nl.svg";
 
 import ISO6991 from "iso-639-1";
-import { defaults } from "autoprefixer";
 
 export interface Props extends astroHTML.JSX.SelectHTMLAttributes {
   showFlag?: boolean;
@@ -22,8 +21,9 @@ const { pathname } = Astro.url;
 
 const { showFlag = false, ...attributes } = Astro.props;
 
-const GetFlag = (props: { langCode: string }) => {
-  let image = "";
+let image = "";
+
+const GetFlag = (props: { langCode: string }) => { 
   switch (props.langCode) {
     case "en": {
       image = en 
@@ -41,8 +41,8 @@ const GetFlag = (props: { langCode: string }) => {
       image = es
     }
   }
-  return (<img src={image} alt={props.langCode} />);
 }
+// Use the following website for free json translations: https://hotpot.ai/file-translator?s=translate-json
 ---
 
 <select onchange="location = this.value;" {...attributes}>
@@ -50,17 +50,13 @@ const GetFlag = (props: { langCode: string }) => {
     supportedLanguages.map((supportedLanguage: string) => {
       let value = localizePath(pathname, supportedLanguage);
       console.log(supportedLanguage);
-      const flag = showFlag
-        ? <GetFlag langCode={supportedLanguage} /> + " "
-        : "";
       const nativeName = ISO6991.getNativeName(supportedLanguage);
-      const label = flag + nativeName;
+      const label = nativeName;
 
       return (
         <option value={value} selected={supportedLanguage === currentLanguage}>
-          {
-            label
-          }
+          {showFlag == true && image !== "" ? <img src={image} alt={supportedLanguage} /> : <></>}
+          {label}
         </option>
       );
     })
