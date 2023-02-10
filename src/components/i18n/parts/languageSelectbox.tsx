@@ -1,37 +1,43 @@
-import i18next from "i18next";
-
-import { localizePath } from "astro-i18next";
-import ISO6991 from "iso-639-1";
-
-const supportedLanguages = i18next.languages;
-const currentLanguage = i18next.language;
+import ISO6391 from "iso-639-1";
 
 const LanguageSelectbox = (props: {
-	pathname: string;
 	showFlag: boolean;
-	attributes: any;
+	langsAvailable: any;
+	currentLang: string;
 }) => {
-	let attrs = [];
-	if (props.attributes !== undefined) {
-		attrs = props.attributes;
+	const pathname = window.location.pathname;
+	let defaultVal = "en";
+
+	if (props.currentLang && props.currentLang !== defaultVal) {
+		defaultVal = props.currentLang;
 	}
+
+	const handleLangChange = () => {
+		//e: React.ChangeEvent
+		var Dropdown = document.getElementById(
+			"langSwitch"
+		) as HTMLSelectElement;
+		console.log(Dropdown, pathname);
+		//window.location.assign(`/${e.currentTarget}`);
+	};
+
+	//console.log(props.currentLang);
 
 	return (
 		<select
-			onChange={(e) => {
-				window.location.assign(`/${e.currentTarget.value}`);
-			}}
-			{...attrs}
+			id="langSwitch"
+			onChange={handleLangChange}
+			defaultValue={defaultVal}
 		>
-			{supportedLanguages.map((supportedLanguage: string) => {
-				let value = localizePath(props.pathname, supportedLanguage);
-				const nativeName = ISO6991.getNativeName(supportedLanguage);
-				const label = nativeName;
+			{props.langsAvailable.map((current: string) => {
+				const langCode = current;
+				const label = ISO6391.getName(current);
 
 				return (
 					<option
-						value={value}
-						selected={supportedLanguage === currentLanguage}
+						key={langCode.toString()}
+						value={langCode}
+						defaultValue={defaultVal}
 					>
 						{label}
 					</option>

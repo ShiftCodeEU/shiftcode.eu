@@ -27,7 +27,7 @@ export default defineConfig({
 		react(),
 		prefetch({
 			// Allow up to four links to be prefetched concurrently
-			throttle: 4,
+			throttle: 4
 			// Only prefetch links with an href that begins with `/projects`
 			//selector: "a[href^='/projects']"
 		}),
@@ -36,7 +36,7 @@ export default defineConfig({
 			// filter: (page) => page !== "https://shiftcode.eu/page-path-here",
 			// Entrylimit of pages amount in the sitemap
 			// entryLimit: 10000,
-			changefreq: "per build",
+			changefreq: "always",
 			priority: 0.7,
 			lastmod: new Date(),
 			// External page inclusions by url
@@ -54,16 +54,16 @@ export default defineConfig({
 					de: "de",
 					fr: "fr",
 					es: "es",
-					nl: "nl",
-				},
-			},
+					nl: "nl"
+				}
+			}
 		}),
 		partytown({
 			// toggle debug mode.
-			config: { debug: false },
+			config: { debug: false }
 		}),
 		tailwind({
-			config: { path: "./tailwind.config.cjs", applyBaseStyles: false },
-		}),
-	],
+			config: { path: "./tailwind.config.cjs", applyBaseStyles: false }
+		})
+	]
 });
