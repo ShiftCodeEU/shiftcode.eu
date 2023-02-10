@@ -28,3 +28,11 @@
 	);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8b5cf6",endColorstr="#4ade80",GradientType=1);
 }
+
+.bg-glass-black {
+	background: rgba(0, 0, 0, 0.19);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(3.2px);
+	-webkit-backdrop-filter: blur(3.2px);
+}
