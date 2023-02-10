@@ -24,7 +24,9 @@ export default defineConfig({
 	site: "https://shiftcode.eu",
 	integrations: [
 		astroI18next(),
-		react(),
+		react({
+			strict: true
+		}),
 		prefetch({
 			// Allow up to four links to be prefetched concurrently
 			throttle: 4

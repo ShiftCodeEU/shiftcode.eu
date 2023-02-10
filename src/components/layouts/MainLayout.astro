@@ -1,22 +1,22 @@
 ---
 import i18next from "i18next";
 import { HeadHrefLangs } from "astro-i18next/components";
-const { title, desc } = Astro.props
+const { title, desc } = Astro.props;
 ---
 
 <html lang={i18next.language} class="h-screen bg-gradient-shiftcode">
-  <head>
-    <title>{title}</title>
-    <meta name="description" content={desc}>
-    <meta charset="utf-8" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="viewport" content="width=device-width" />
+	<head>
+		<title>{title}</title>
+		<meta name="description" content={desc} />
+		<meta charset="utf-8" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="viewport" content="width=device-width" />
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <!-- <script type="text/partytown" src="fancy-analytics.js"></script> -->
-    <HeadHrefLangs />
-  </head>
-  <body class="p-4">
-      <slot /> 
-  </body>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<!-- <script type="text/partytown" src="fancy-analytics.js"></script> -->
+		<HeadHrefLangs />
+	</head>
+	<body class="p-4">
+		<slot />
+	</body>
 </html>

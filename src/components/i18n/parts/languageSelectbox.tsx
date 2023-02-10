@@ -1,4 +1,5 @@
 import ISO6391 from "iso-639-1";
+import { ChangeLanguage } from "@utils/changeLanguage";
 
 const LanguageSelectbox = (props: {
 	showFlag: boolean;
@@ -14,11 +15,13 @@ const LanguageSelectbox = (props: {
 
 	const handleLangChange = () => {
 		//e: React.ChangeEvent
-		var Dropdown = document.getElementById(
+		const Dropdown = document.getElementById(
 			"langSwitch"
 		) as HTMLSelectElement;
-		console.log(Dropdown, pathname);
-		//window.location.assign(`/${e.currentTarget}`);
+		const sel = Dropdown.selectedIndex;
+		const opt = Dropdown.options[sel];
+
+		ChangeLanguage(opt.value);
 	};
 
 	//console.log(props.currentLang);

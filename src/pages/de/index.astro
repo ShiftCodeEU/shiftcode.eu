@@ -2,8 +2,8 @@
 import i18next, { t, changeLanguage } from "i18next";
 const supportedLanguages = i18next.languages;
 import "../../styles/tailwind.css";
-import LanguageSelector from "../../components/i18n/parts/languageSelectbox";
-import Layout from "../../components/layouts/MainLayout.astro";
+import LanguageSelector from "@components/i18n/parts/languageSelectbox";
+import Layout from "@components/layouts/MainLayout.astro";
 
 changeLanguage("de");
 ---

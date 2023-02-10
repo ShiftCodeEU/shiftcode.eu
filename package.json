@@ -33,6 +33,8 @@
 	},
 	"devDependencies": {
 		"@astrojs/compiler": "^1.1.0",
+		"@divriots/jampack": "0.9.1",
+		"@trivago/prettier-plugin-sort-imports": "^4.0.0",
 		"@types/react": "^18.0.27",
 		"@types/react-dom": "18.0.10",
 		"@types/react-router-dom": "^5.3.3",
@@ -42,7 +44,6 @@
 		"postcss": "^8.4.21",
 		"prettier": "^2.8.4",
 		"prettier-plugin-astro": "^0.8.0",
-		"run-when-changed": "^2.1.0",
-		"@divriots/jampack": "0.9.1"
+		"run-when-changed": "^2.1.0"
 	}
 }
