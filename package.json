@@ -43,7 +43,7 @@
 		"postcss": "^8.4.21",
 		"prettier": "^2.8.4",
 		"prettier-plugin-astro": "^0.8.0",
-		"run-when-changed": "^2.1.0"
-		"@divriots/jampack": "0.9.1",
+		"run-when-changed": "^2.1.0",
+		"@divriots/jampack": "0.9.1"
 	}
 }
