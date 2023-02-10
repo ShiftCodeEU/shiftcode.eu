@@ -14,25 +14,37 @@ jobs:
 
     steps:
       - name: Check out code
-        uses: actions/checkout@v3
+        uses: actions/checkout@latest
         with:
           fetch-depth: 2
 
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@latest
         with:
-          version: 6.32.2
+            version: latest
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: "pnpm"
-
+          
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+          
       - name: Install dependencies
         run: pnpm install
 
       - name: Lint
         run: pnpm lint
 
+      - uses: actions/cache@latest
+        with:
+          path: '.jampack'
+          key: 'jampack'
+          
       - name: Build
-        run: pnpm build
+        shell: bash
+        run: pnpm run build:release
