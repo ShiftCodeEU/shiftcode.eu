@@ -6,7 +6,7 @@ import ISO6991 from "iso-639-1";
 const supportedLanguages = i18next.languages;
 const currentLanguage = i18next.language;
 
-const LanguageSelectbox = async (props: {
+const LanguageSelectbox = (props: {
 	pathname: string;
 	showFlag: boolean;
 	attributes: any;
