@@ -6,6 +6,7 @@
 		"dev": "astro dev",
 		"dev+astrolint": "concurrently 'pnpm:dev' 'pnpm:gen:lang-watch'",
 		"build": "astro build",
+		"build:release": "astro build && jampack ./dist",
 		"preview": "astro preview",
 		"astro": "astro",
 		"lint": "prettier -w --plugin-search-dir=. .",
@@ -43,5 +44,6 @@
 		"prettier": "^2.8.4",
 		"prettier-plugin-astro": "^0.8.0",
 		"run-when-changed": "^2.1.0"
+		"@divriots/jampack": "0.9.1",
 	}
 }
