@@ -18,7 +18,7 @@ jobs:
         with:
           fetch-depth: 2
 
-      - uses: pnpm/action-setup@2.2.4
+      - uses: pnpm/action-setup@v2
         with:
             version: latest
 
@@ -40,7 +40,7 @@ jobs:
       - name: Lint
         run: pnpm lint
 
-      - uses: actions/cache@3.2.5
+      - uses: actions/cache@v3
         with:
           path: '.jampack'
           key: 'jampack'
