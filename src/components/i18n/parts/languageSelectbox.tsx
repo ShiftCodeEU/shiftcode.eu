@@ -1,52 +1,80 @@
 import ISO6391 from "iso-639-1";
 import { ChangeLanguage } from "@utils/changeLanguage";
+import { hasFlag } from "country-flag-icons";
+import { US, NL, FR, ES, DE } from "country-flag-icons/react/3x2";
 
 const LanguageSelectbox = (props: {
 	showFlag: boolean;
 	langsAvailable: any;
 	currentLang: string;
 }) => {
-	const pathname = window.location.pathname;
 	let defaultVal = "en";
 
 	if (props.currentLang && props.currentLang !== defaultVal) {
 		defaultVal = props.currentLang;
 	}
 
-	const handleLangChange = () => {
-		//e: React.ChangeEvent
-		const Dropdown = document.getElementById(
-			"langSwitch"
-		) as HTMLSelectElement;
-		const sel = Dropdown.selectedIndex;
-		const opt = Dropdown.options[sel];
+	const handleLangChange = (langCode: string) => {
+		ChangeLanguage(langCode);
+	};
 
-		ChangeLanguage(opt.value);
+	const ShowFlag = (props: { langCode: string }) => {
+		let currentFlag = <></>;
+		switch (props.langCode) {
+			case "en": {
+				currentFlag = <US className="w-6 h-6" />;
+				break;
+			}
+			case "nl": {
+				currentFlag = <NL className="w-6 h-6" />;
+				break;
+			}
+			case "de": {
+				currentFlag = <DE className="w-6 h-6" />;
+				break;
+			}
+			case "es": {
+				currentFlag = <ES className="w-6 h-6" />;
+				break;
+			}
+			case "fr": {
+				currentFlag = <FR className="w-6 h-6" />;
+				break;
+			}
+		}
+		return currentFlag;
 	};
 
 	//console.log(props.currentLang);
 
 	return (
-		<select
-			id="langSwitch"
-			onChange={handleLangChange}
-			defaultValue={defaultVal}
-		>
-			{props.langsAvailable.map((current: string) => {
-				const langCode = current;
-				const label = ISO6391.getName(current);
+		<div className="dropdown dropdown-hover">
+			<label tabIndex={0} className="btn m-1">
+				<ShowFlag langCode={defaultVal} />
+			</label>
+			<ul
+				tabIndex={0}
+				className="dropdown-content p-2 shadow bg-base-100 rounded-box w-auto"
+			>
+				{props.langsAvailable.map((current: string) => {
+					const langCode = current;
 
-				return (
-					<option
-						key={langCode.toString()}
-						value={langCode}
-						defaultValue={defaultVal}
-					>
-						{label}
-					</option>
-				);
-			})}
-		</select>
+					if (current == defaultVal) {
+						return;
+					}
+
+					return (
+						<li
+							key={langCode.toString()}
+							onClick={() => handleLangChange(current)}
+							className="flag-dropdown-item"
+						>
+							<ShowFlag langCode={langCode} />
+						</li>
+					);
+				})}
+			</ul>
+		</div>
 	);
 };
 

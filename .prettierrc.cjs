@@ -11,9 +11,6 @@ module.exports = {
 	tabWidth: 4,
 	trailingComma: "none",
 	useTabs: true,
-	importOrder: ["^@astro/(.*)$", "^react/(.*)$", "^[./]"],
-	importOrderSeparation: true,
-	importOrderSortSpecifiers: true,
 	overrides: [
 		{
 			files: "**/*.astro",
