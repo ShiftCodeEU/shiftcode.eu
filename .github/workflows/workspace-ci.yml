@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Check out code
-        uses: actions/checkout@latest
+        uses: actions/checkout@3.3.0
         with:
           fetch-depth: 2
 
@@ -23,7 +23,7 @@ jobs:
             version: latest
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v3.6.0
         with:
           node-version: 18
           cache: "pnpm"
@@ -40,7 +40,7 @@ jobs:
       - name: Lint
         run: pnpm lint
 
-      - uses: actions/cache@latest
+      - uses: actions/cache@3.2.5
         with:
           path: '.jampack'
           key: 'jampack'
