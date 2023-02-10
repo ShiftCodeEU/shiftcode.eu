@@ -1,14 +1,9 @@
 ---
-import i18next from "i18next";
-import { localizePath } from "astro-i18next";
-import ISO6991 from "iso-639-1";
+import LanguageSelectbox from "./parts/languageSelectbox";
 
 export interface Props extends astroHTML.JSX.SelectHTMLAttributes {
-  showFlag?: boolean;
+	showFlag?: boolean;
 }
-
-const supportedLanguages = i18next.languages;
-const currentLanguage = i18next.language;
 
 const { pathname } = Astro.url;
 
@@ -17,18 +12,8 @@ const { showFlag = false, ...attributes } = Astro.props;
 // Use the following website for free json translations: https://hotpot.ai/file-translator?s=translate-json
 ---
 
-<select onchange="location = this.value;" {...attributes}>
-  {
-    supportedLanguages.map((supportedLanguage: string) => {
-      let value = localizePath(pathname, supportedLanguage);
-      const nativeName = ISO6991.getNativeName(supportedLanguage);
-      const label = nativeName;
-
-      return (
-        <option value={value} selected={supportedLanguage === currentLanguage}>
-          {label}
-        </option>
-      );
-    })
-  }
-</select>
+<LanguageSelectbox
+	pathname={pathname}
+	showFlag={true}
+	attributes={attributes}
+/>
