@@ -1,0 +1,6 @@
+{
+  PageTransitionWrapper: {
+    ExampleRef: "https://www.maxiferreira.com/blog/astro-page-transitions/",
+    Notes: "Use example shown above to create a transition wrapper for all pages within website."
+  }
+}
