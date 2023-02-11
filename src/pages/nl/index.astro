@@ -8,12 +8,15 @@ changeLanguage("nl");
 const supportedLanguages = i18next.languages;
 ---
 
-<Layout title={t("site.title")} description={t("site.desc")}>
-	<div class="flex flex-row">
-		<span class="mt-2 font-extrabold">
+<Layout
+	title={`${t("home.title")} ${t("site.titleTemplate")}`}
+	description={t("site.desc")}
+>
+	<div class="flex flex-row w-{fraction} justify-between">
+		<span class="mt-2 font-extrabold pl-2">
 			{t("home.welcome")}
 		</span>
-		<div class="ml-auto mr-0">
+		<div class="self-end">
 			<LanguageSelector
 				showFlag={true}
 				langsAvailable={supportedLanguages}

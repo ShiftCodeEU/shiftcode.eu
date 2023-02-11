@@ -3,14 +3,12 @@
 	"type": "module",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "concurrently 'pnpm:gen:lang-watch' 'pnpm:astro:dev'",
+		"dev": "astro dev",
 		"build": "astro-i18next generate && astro build",
 		"build:release": "pnpm run build && jampack ./dist",
 		"preview": "astro preview",
 		"astro": "astro",
-		"astro:dev": "astro dev",
 		"lint": "prettier -w --plugin-search-dir=. .",
-		"gen:lang-watch": "pnpm run-when-changed --watch \"./src**\" --exec \"pnpm run gen:lang\"",
 		"gen:lang": "astro-i18next generate"
 	},
 	"dependencies": {
@@ -20,6 +18,7 @@
 		"@astrojs/sitemap": "^1.0.1",
 		"@astrojs/tailwind": "^3.0.1",
 		"@react-spring/web": "^9.6.1",
+		"@vercel/og": "^0.1.0",
 		"astro": "^2.0.10",
 		"astro-i18next": "1.0.0-beta.17",
 		"country-flag-icons": "^1.5.5",
@@ -40,11 +39,9 @@
 		"@types/react-dom": "18.0.10",
 		"@types/react-router-dom": "^5.3.3",
 		"autoprefixer": "^10.4.13",
-		"concurrently": "^7.6.0",
 		"cssnano": "^5.1.14",
 		"postcss": "^8.4.21",
 		"prettier": "^2.8.4",
-		"prettier-plugin-astro": "^0.8.0",
-		"run-when-changed": "^2.1.0"
+		"prettier-plugin-astro": "^0.8.0"
 	}
 }

@@ -1,9 +1,15 @@
 {
-  "site": {
-    "title": "Home | Shiftcode - Web, App & software development",
-    "desc": "This website is still under development, a proper description is on its way!"
-  },
-  "home": {
-    "welcome": "Welcome to ShiftCode!"
-  }
+	"site": {
+		"titleTemplate": " | Shiftcode - Web, App & software development",
+		"desc": "This website is still under development, a proper description is on its way!"
+	},
+	"error": {
+		"404": {
+			"title": "Page not found!"
+		}
+	},
+	"home": {
+		"title": "Home",
+		"welcome": "Welcome to ShiftCode!"
+	}
 }

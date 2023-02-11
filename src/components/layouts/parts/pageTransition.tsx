@@ -13,16 +13,21 @@ const PageTransition = (props: { children: any }) => {
 					initial="initialState"
 					animate="animateState"
 					exit="exitState"
-					transition={{ duration: 0.8 }}
+					transition={{
+						duration: 0.45
+					}}
 					variants={{
 						initialState: {
-							opacity: 0
+							opacity: 0,
+							top: -50
 						},
 						animateState: {
-							opacity: 1
+							opacity: 1,
+							top: 0
 						},
 						exitState: {
-							opacity: 0
+							opacity: 0,
+							top: -50
 						}
 					}}
 				>
