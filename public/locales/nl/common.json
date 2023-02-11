@@ -2,14 +2,5 @@
 	"site": {
 		"titleTemplate": " | Shiftcode - Web, App & software ontwikkeling",
 		"desc": "Deze website is nog in ontwikkeling, een goede beschrijving is onderweg!"
-	},
-	"error": {
-		"404": {
-			"title": "Pagina niet gevonden!"
-		}
-	},
-	"home": {
-		"title": "Home",
-		"welcome": "Welkom bij ShiftCode!"
 	}
 }

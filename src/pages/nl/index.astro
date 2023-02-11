@@ -9,12 +9,12 @@ const supportedLanguages = i18next.languages;
 ---
 
 <Layout
-	title={`${t("home.title")} ${t("site.titleTemplate")}`}
+	title={`${t("home.title", { ns: "pages" })} ${t("site.titleTemplate")}`}
 	description={t("site.desc")}
 >
 	<div class="flex flex-row w-{fraction} justify-between">
 		<span class="mt-2 font-extrabold pl-2">
-			{t("home.welcome")}
+			{t("home.welcome", { ns: "pages" })}
 		</span>
 		<div class="self-end">
 			<LanguageSelector

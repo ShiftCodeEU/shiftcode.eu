@@ -11,7 +11,7 @@ const supportedLanguages = i18next.languages;
 <Layout title={`404 ${t("site.titleTemplate")}`} description={t("site.desc")}>
 	<div class="flex flex-col w-{fraction} h-screen">
 		<div class="m-auto font-extrabold">
-			{t("error.404.title")}
+			{t("404.title", { ns: "errors" })}
 		</div>
 	</div>
 </Layout>

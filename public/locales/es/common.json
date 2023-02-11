@@ -2,14 +2,5 @@
 	"site": {
 		"titleTemplate": " | Shiftcode - Desarrollo web, de aplicaciones y de software",
 		"desc": "Este sitio web todavía está en desarrollo, ¡una descripción adecuada está en camino!"
-	},
-	"error": {
-		"404": {
-			"title": "Página no encontrada!"
-		}
-	},
-	"home": {
-		"title": "Inicio",
-		"welcome": "¡Bienvenido a ShiftCode!"
 	}
 }
