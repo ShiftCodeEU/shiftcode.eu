@@ -1,23 +1,25 @@
 ---
 import i18next, { t, changeLanguage } from "i18next";
-const supportedLanguages = i18next.languages;
-import "../../styles/tailwind.css";
 import LanguageSelector from "@components/i18n/parts/languageSelectbox";
 import Layout from "@components/layouts/MainLayout.astro";
 
 changeLanguage("de");
+
+const supportedLanguages = i18next.languages;
 ---
 
 <Layout title={t("site.title")} description={t("site.desc")}>
-	<div class="flex flex-col">
-		<span>
+	<div class="flex flex-row">
+		<span class="mt-2 font-extrabold">
 			{t("home.welcome")}
 		</span>
-		<LanguageSelector
-			showFlag={true}
-			langsAvailable={supportedLanguages}
-			currentLang={i18next.language}
-			client:only
-		/>
+		<div class="ml-auto mr-0">
+			<LanguageSelector
+				showFlag={true}
+				langsAvailable={supportedLanguages}
+				currentLang={i18next.language}
+				client:only="react"
+			/>
+		</div>
 	</div>
 </Layout>

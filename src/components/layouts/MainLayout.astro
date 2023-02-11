@@ -1,22 +1,29 @@
 ---
+import "../../styles/tailwind.css";
+
 import i18next from "i18next";
 import { HeadHrefLangs } from "astro-i18next/components";
+
+import PageTransition from "./parts/pageTransition";
+
 const { title, desc } = Astro.props;
 ---
 
-<html lang={i18next.language} class="h-screen bg-gradient-shiftcode">
+<html lang={i18next.language}>
 	<head>
 		<title>{title}</title>
 		<meta name="description" content={desc} />
 		<meta charset="utf-8" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
 		<!-- <script type="text/partytown" src="fancy-analytics.js"></script> -->
 		<HeadHrefLangs />
 	</head>
-	<body class="p-4">
-		<slot />
+	<body class="flex flex-col w-full">
+		<PageTransition client:only="react">
+			<slot />
+		</PageTransition>
 	</body>
 </html>
