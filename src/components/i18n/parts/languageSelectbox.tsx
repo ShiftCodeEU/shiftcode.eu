@@ -48,13 +48,13 @@ const LanguageSelectbox = (props: {
 	//console.log(props.currentLang);
 
 	return (
-		<div className="dropdown dropdown-hover">
+		<div className="dropdown dropdown-bottom dropdown-end dropdown-hover">
 			<label tabIndex={0} className="btn m-1">
 				<ShowFlag langCode={defaultVal} />
 			</label>
 			<ul
 				tabIndex={0}
-				className="dropdown-content p-2 shadow bg-base-100 rounded-box w-auto"
+				className="dropdown-content p-2 shadow bg-base-100 rounded-box w-full"
 			>
 				{props.langsAvailable.map((current: string) => {
 					const langCode = current;
@@ -67,7 +67,7 @@ const LanguageSelectbox = (props: {
 						<li
 							key={langCode.toString()}
 							onClick={() => handleLangChange(current)}
-							className="flag-dropdown-item"
+							className="flag-dropdown-item cursor-pointer"
 						>
 							<ShowFlag langCode={langCode} />
 						</li>

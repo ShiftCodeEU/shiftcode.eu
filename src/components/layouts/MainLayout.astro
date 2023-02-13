@@ -4,9 +4,12 @@ import "../../styles/tailwind.css";
 import i18next from "i18next";
 import { HeadHrefLangs } from "astro-i18next/components";
 
+import NavBar from "./parts/navbar";
+import Footer from "./parts/footer";
 import PageTransition from "./parts/pageTransition";
 
 const { title, desc } = Astro.props;
+const supportedLanguages = i18next.languages;
 ---
 
 <html lang={i18next.language}>
@@ -23,7 +26,15 @@ const { title, desc } = Astro.props;
 	</head>
 	<body class="flex flex-col w-full">
 		<PageTransition client:only="react">
-			<slot />
+			<NavBar
+				currentLang={i18next.language}
+				languages={supportedLanguages}
+				client:only="react"
+			/>
+			<main class="min-h-screen my-4">
+				<slot />
+			</main>
+			<Footer />
 		</PageTransition>
 	</body>
 </html>

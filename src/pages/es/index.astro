@@ -1,28 +1,17 @@
 ---
 import i18next, { t, changeLanguage } from "i18next";
-import LanguageSelector from "@components/i18n/parts/languageSelectbox";
 import Layout from "@components/layouts/MainLayout.astro";
 
 changeLanguage("es");
-
-const supportedLanguages = i18next.languages;
 ---
 
 <Layout
 	title={`${t("home.title", { ns: "pages" })} ${t("site.titleTemplate")}`}
 	desc={t("site.desc")}
 >
-	<div class="flex flex-row w-{fraction} justify-between">
+	<div class="flex flex-row w-{fraction}">
 		<span class="mt-2 font-extrabold pl-2">
 			{t("home.welcome", { ns: "pages" })}
 		</span>
-		<div class="self-end">
-			<LanguageSelector
-				showFlag={true}
-				langsAvailable={supportedLanguages}
-				currentLang={i18next.language}
-				client:only="react"
-			/>
-		</div>
 	</div>
 </Layout>

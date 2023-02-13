@@ -6,7 +6,7 @@ const PageTransition = (props: { children: any }) => {
 	};
 
 	return (
-		<div className="w-full">
+		<div className="w-full px-2 pt-2 lg:pr-4">
 			<AnimatePresence mode="wait">
 				<motion.div
 					key={window.location.pathname}
@@ -14,7 +14,7 @@ const PageTransition = (props: { children: any }) => {
 					animate="animateState"
 					exit="exitState"
 					transition={{
-						duration: 0.45
+						duration: 0.75
 					}}
 					variants={{
 						initialState: {
