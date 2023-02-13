@@ -18,33 +18,11 @@ const Navbar = (props: { currentLang: string; languages: any[] }) => {
 						tabIndex={0}
 						className="dropdown-content menu rounded-box menu-compact mt-3 w-52 bg-base-100 p-2 shadow"
 					>
-						<li>
+						<li className="btn-dark">
 							<a>Item 1</a>
 						</li>
-						<li tabIndex={0}>
-							<a className="justify-between">
-								Parent
-								<svg
-									className="fill-current"
-									xmlns="http://www.w3.org/2000/svg"
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-								>
-									<path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-								</svg>
-							</a>
-							<ul className="p-2">
-								<li>
-									<a>Submenu 1</a>
-								</li>
-								<li>
-									<a>Submenu 2</a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<a>Item 3</a>
+						<li className="btn-dark">
+							<a>Item 2</a>
 						</li>
 					</ul>
 				</div>
@@ -57,19 +35,8 @@ const Navbar = (props: { currentLang: string; languages: any[] }) => {
 					<li className="btn-dark">
 						<a>Item 1</a>
 					</li>
-					<li tabIndex={0} className="btn-dark">
-						<a className="btn-dark">Parent</a>
-						<ul className="mt-3 bg-base-100 p-2">
-							<li className="btn-dark ">
-								<a>Submenu 1</a>
-							</li>
-							<li className="btn-dark">
-								<a>Submenu 2</a>
-							</li>
-						</ul>
-					</li>
 					<li className="btn-dark">
-						<a>Item 3</a>
+						<a>Item 2</a>
 					</li>
 				</ul>
 			</div>
