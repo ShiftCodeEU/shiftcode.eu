@@ -16,6 +16,25 @@ const LanguageSelectbox = (props: {
 		ChangeLanguage(langCode);
 	};
 
+	if (typeof window !== "undefined") {
+		if (/^en\b/.test(navigator.language)) {
+			const lastLangSelection = localStorage.getItem("lastLang");
+			const isAvailable =
+				Array.from(props.langsAvailable).findIndex(
+					(current) => current == window.navigator.language
+				) == -1
+					? false
+					: true;
+
+			if (isAvailable == true) {
+				if (lastLangSelection !== window.navigator.language) {
+					localStorage.setItem("lastLang", window.navigator.language);
+					handleLangChange(window.navigator.language);
+				}
+			}
+		}
+	}
+
 	const ShowFlag = (props: { langCode: string }) => {
 		let currentFlag = <></>;
 		switch (props.langCode) {
@@ -42,8 +61,6 @@ const LanguageSelectbox = (props: {
 		}
 		return currentFlag;
 	};
-
-	//console.log(props.currentLang);
 
 	return (
 		<div className="dropdown dropdown-bottom dropdown-end dropdown-hover">
