@@ -1,5 +1,5 @@
 import { ChangeLanguage } from "@utils/changeLanguage";
-import { US, NL, FR, ES, DE } from "country-flag-icons/react/3x2";
+import { DE, ES, FR, NL, US } from "country-flag-icons/react/3x2";
 
 const LanguageSelectbox = (props: {
 	showFlag: boolean;
@@ -39,23 +39,23 @@ const LanguageSelectbox = (props: {
 		let currentFlag = <></>;
 		switch (props.langCode) {
 			case "en-US": {
-				currentFlag = <US className="w-6 h-6" />;
+				currentFlag = <US className="h-6 w-6" />;
 				break;
 			}
 			case "nl-NL": {
-				currentFlag = <NL className="w-6 h-6" />;
+				currentFlag = <NL className="h-6 w-6" />;
 				break;
 			}
 			case "de-DE": {
-				currentFlag = <DE className="w-6 h-6" />;
+				currentFlag = <DE className="h-6 w-6" />;
 				break;
 			}
 			case "es-ES": {
-				currentFlag = <ES className="w-6 h-6" />;
+				currentFlag = <ES className="h-6 w-6" />;
 				break;
 			}
 			case "fr-FR": {
-				currentFlag = <FR className="w-6 h-6" />;
+				currentFlag = <FR className="h-6 w-6" />;
 				break;
 			}
 		}
@@ -69,7 +69,7 @@ const LanguageSelectbox = (props: {
 			</label>
 			<ul
 				tabIndex={0}
-				className="dropdown-content p-2 shadow bg-base-100 rounded-box w-full"
+				className="dropdown-content rounded-box w-full bg-base-100 p-2 shadow"
 			>
 				{props.langsAvailable.map((current: string) => {
 					const langCode = current;

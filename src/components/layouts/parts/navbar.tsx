@@ -8,15 +8,15 @@ const Navbar = (props: { currentLang: string; languages: any[] }) => {
 	// };
 
 	return (
-		<div className="navbar bg-glass-black sticky top-2 z-50">
+		<div className="bg-glass-black navbar sticky top-2 z-50">
 			<div className="navbar-start">
 				<div className="dropdown">
-					<label tabIndex={0} className="btn btn-dark lg:hidden">
+					<label tabIndex={0} className="btn-dark btn lg:hidden">
 						Menu
 					</label>
 					<ul
 						tabIndex={0}
-						className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+						className="dropdown-content menu rounded-box menu-compact mt-3 w-52 bg-base-100 p-2 shadow"
 					>
 						<li>
 							<a>Item 1</a>
@@ -48,18 +48,18 @@ const Navbar = (props: { currentLang: string; languages: any[] }) => {
 						</li>
 					</ul>
 				</div>
-				<a href="/" className="pl-2 normal-case text-xl cursor-pointer">
+				<a href="/" className="cursor-pointer pl-2 text-xl normal-case">
 					ShiftCode
 				</a>
 			</div>
 			<div className="navbar-center hidden lg:flex">
-				<ul className="menu menu-horizontal px-1 flex gap-2">
+				<ul className="menu menu-horizontal flex gap-2 px-1">
 					<li className="btn-dark">
 						<a>Item 1</a>
 					</li>
 					<li tabIndex={0} className="btn-dark">
 						<a className="btn-dark">Parent</a>
-						<ul className="p-2 bg-base-100 mt-3">
+						<ul className="mt-3 bg-base-100 p-2">
 							<li className="btn-dark ">
 								<a>Submenu 1</a>
 							</li>

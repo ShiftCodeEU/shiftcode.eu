@@ -4,13 +4,13 @@
 @tailwind utilities;
 
 :root {
-	@apply bg-opacity-[85%] bg-accentAlt;
+	@apply bg-accentAlt bg-opacity-[85%];
 }
 
 html {
 	width: 100%;
 	height: 100%;
-	@apply overflow-auto scrollbar scrollbar-thumb-rounded scrollbar-thumb-base-100 scrollbar-track-[rgba(0,0,0,.25)] scrollbar-w-2;
+	@apply overflow-auto scrollbar scrollbar-track-[rgba(0,0,0,.25)] scrollbar-thumb-base-100 scrollbar-thumb-rounded scrollbar-w-2;
 }
 
 .bg-gradient-shiftcode {

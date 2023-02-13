@@ -5,12 +5,12 @@ const Footer = () => {
 		CurrentYear == StartYear ? StartYear : `${StartYear} - ${CurrentYear}`;
 
 	return (
-		<footer className="footer footer-center p-10 bg-base-100 text-base-content rounded-xl mb-2">
+		<footer className="footer footer-center mb-2 rounded-xl bg-base-100 p-10 text-base-content">
 			<div className="grid grid-flow-col gap-4">
-				<a className="link link-hover">About us</a>
-				<a className="link link-hover">Projects</a>
-				<a className="link link-hover">Contact</a>
-				<a className="link link-hover">Open-Source</a>
+				<a className="link-hover link">About us</a>
+				<a className="link-hover link">Projects</a>
+				<a className="link-hover link">Contact</a>
+				<a className="link-hover link">Open-Source</a>
 			</div>
 			<div>
 				<div className="grid grid-flow-col gap-4">
