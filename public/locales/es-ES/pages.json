@@ -1,6 +1,9 @@
 {
 	"home": {
 		"title": "Inicio",
-		"welcome": "¡Bienvenido a ShiftCode!"
+		"hero": {
+			"title": "¡Bienvenido a ShiftCode!",
+			"subtitle": "Desde sitios web, aplicaciones web y one-pagers hasta aplicaciones móviles y de escritorio nativas."
+		}
 	}
 }

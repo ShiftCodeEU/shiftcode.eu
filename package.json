@@ -9,7 +9,7 @@
 		"preview": "astro preview",
 		"astro": "astro",
 		"lint": "prettier -w --plugin-search-dir=. ./src",
-		"gen:lang": "astro-i18next generate"
+		"gen:lang": "astro-i18next generate && pnpm run lint"
 	},
 	"dependencies": {
 		"@astrojs/partytown": "^1.0.3",

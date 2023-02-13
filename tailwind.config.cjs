@@ -16,7 +16,7 @@ module.exports = {
 			{
 				shiftcode: {
 					primary: "#d9d9d9",
-					secondary: "#4ade80",
+					secondary: "#33c094",
 					accent: "#8b5cf6",
 					neutral: "#110E0E",
 					"base-100": "#171212",
