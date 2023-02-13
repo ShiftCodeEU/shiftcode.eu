@@ -2,12 +2,12 @@
 export default {
 	defaultNamespace: "common",
 	namespaces: ["common", "pages", "errors"],
-	defaultLocale: "en",
+	defaultLocale: "en-US",
 	locales: [
-		"en", // The `defaultLocale` value must present in `locales` keys
-		"de",
-		"fr",
-		"es",
-		"nl"
+		"en-US", // The `defaultLocale` value must present in `locales` keys
+		"de-DE",
+		"fr-FR",
+		"es-ES",
+		"nl-NL"
 	]
 };

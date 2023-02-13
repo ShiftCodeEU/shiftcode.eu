@@ -1,6 +1,12 @@
 import LanguageSelector from "@components/i18n/parts/languageSelectbox";
 
 const Navbar = (props: { currentLang: string; languages: any[] }) => {
+	// const hrefHandler = (pathName: string) => {
+	// 	if (typeof window !== "undefined") {
+	// 		const isDutch = pathName.startsWith("/nl-NL");
+	// 	}
+	// };
+
 	return (
 		<div className="navbar bg-glass-black sticky top-2 z-50">
 			<div className="navbar-start">

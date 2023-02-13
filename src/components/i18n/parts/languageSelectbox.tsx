@@ -1,6 +1,4 @@
-import ISO6391 from "iso-639-1";
 import { ChangeLanguage } from "@utils/changeLanguage";
-import { hasFlag } from "country-flag-icons";
 import { US, NL, FR, ES, DE } from "country-flag-icons/react/3x2";
 
 const LanguageSelectbox = (props: {
@@ -8,7 +6,7 @@ const LanguageSelectbox = (props: {
 	langsAvailable: any;
 	currentLang: string;
 }) => {
-	let defaultVal = "en";
+	let defaultVal = "en-US";
 
 	if (props.currentLang && props.currentLang !== defaultVal) {
 		defaultVal = props.currentLang;
@@ -21,23 +19,23 @@ const LanguageSelectbox = (props: {
 	const ShowFlag = (props: { langCode: string }) => {
 		let currentFlag = <></>;
 		switch (props.langCode) {
-			case "en": {
+			case "en-US": {
 				currentFlag = <US className="w-6 h-6" />;
 				break;
 			}
-			case "nl": {
+			case "nl-NL": {
 				currentFlag = <NL className="w-6 h-6" />;
 				break;
 			}
-			case "de": {
+			case "de-DE": {
 				currentFlag = <DE className="w-6 h-6" />;
 				break;
 			}
-			case "es": {
+			case "es-ES": {
 				currentFlag = <ES className="w-6 h-6" />;
 				break;
 			}
-			case "fr": {
+			case "fr-FR": {
 				currentFlag = <FR className="w-6 h-6" />;
 				break;
 			}

@@ -48,14 +48,14 @@ export default defineConfig({
 				 *	All urls that don't contain `es` or `fr` after `https://shiftcode.eu/`
 				 *	will be treated as default locale, i.e. `en`
 				 */
-				defaultLocale: "en",
+				defaultLocale: "en-US",
 				locales: {
 					// The `defaultLocale` value must present in `locales` keys
-					en: "en",
-					de: "de",
-					fr: "fr",
-					es: "es",
-					nl: "nl"
+					en: "en-US",
+					de: "de-DE",
+					fr: "fr-FR",
+					es: "es-ES",
+					nl: "nl-NL"
 				}
 			}
 		}),
