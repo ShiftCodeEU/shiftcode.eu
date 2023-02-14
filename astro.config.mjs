@@ -48,11 +48,11 @@ export default defineConfig({
 				defaultLocale: "en",
 				locales: {
 					// The `defaultLocale` value must present in `locales` keys
-					en: "en-US",
-					de: "de-DE",
-					fr: "fr-FR",
-					es: "es-ES",
-					nl: "nl-NL"
+					"en-US": "en-US",
+					"de-DE": "de-DE",
+					"fr-FR": "fr-FR",
+					"es-ES": "es-ES",
+					"nl-NL": "nl-NL"
 				}
 			}
 		}),
