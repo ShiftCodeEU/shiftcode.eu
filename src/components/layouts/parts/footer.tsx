@@ -1,6 +1,9 @@
-import Copyright from "./copyright";
-
 const Footer = () => {
+	const StartYear = 2023;
+	const CurrentYear = new Date().getFullYear();
+	const CP =
+		CurrentYear == StartYear ? StartYear : `${StartYear} - ${CurrentYear}`;
+
 	return (
 		<footer className="footer footer-center mb-2 rounded-xl bg-base-100 p-10 text-base-content">
 			<div className="grid grid-flow-col gap-4">
@@ -32,8 +35,8 @@ const Footer = () => {
 			</div>
 			<div>
 				<p>
-					Copyright © <Copyright /> | All right reserved by ShiftCode
-					Developments
+					Copyright &copy; {String(CP)} | All right reserved by
+					ShiftCode Developments
 				</p>
 			</div>
 		</footer>
