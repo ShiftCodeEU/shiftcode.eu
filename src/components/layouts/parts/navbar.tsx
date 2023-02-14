@@ -46,6 +46,12 @@ const Navbar = (props: { currentLang: string; languages: any }) => {
 						<li>
 							<a href="#">Item 3</a>
 						</li>
+						<li className="btn-dark">
+							<a>Item 1</a>
+						</li>
+						<li className="btn-dark">
+							<a>Item 2</a>
+						</li>
 					</ul>
 				</div>
 				<a href="/" className="cursor-pointer pl-2 text-xl normal-case">
@@ -70,6 +76,9 @@ const Navbar = (props: { currentLang: string; languages: any }) => {
 					</li>
 					<li className="btn-dark">
 						<a href="#">Item 3</a>
+					</li>
+					<li className="btn-dark">
+						<a>Item 2</a>
 					</li>
 				</ul>
 			</div>
