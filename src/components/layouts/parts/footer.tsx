@@ -35,8 +35,8 @@ const Footer = () => {
 			</div>
 			<div>
 				<p>
-					Copyright &copy; {String(CP)} | All right reserved by
-					ShiftCode Developments
+					Copyright &copy; {CP} | All right reserved by&nbsp;
+					<a href="/">ShiftCode Developments</a>
 				</p>
 			</div>
 		</footer>
