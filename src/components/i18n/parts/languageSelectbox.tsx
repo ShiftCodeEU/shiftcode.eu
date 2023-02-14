@@ -27,6 +27,9 @@ const LanguageSelectbox = (props: {
 					: true;
 
 			if (isAvailable == true) {
+				if (!lastLangSelection) {
+					localStorage.setItem("lastLang", window.navigator.language);
+				}
 				if (lastLangSelection !== window.navigator.language) {
 					localStorage.setItem("lastLang", window.navigator.language);
 					handleLangChange(window.navigator.language);
