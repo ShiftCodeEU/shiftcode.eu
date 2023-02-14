@@ -15,8 +15,11 @@ const supportedLanguages = i18next.languages;
 <html lang={i18next.language}>
 	<head>
 		<title>{title}</title>
-		<meta charset="utf-8" />
 		<meta name="description" content={desc} />
+
+		<meta charset="UTF-8" />
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<link
@@ -63,7 +66,6 @@ const supportedLanguages = i18next.languages;
 			content="/favicons/browserconfig.xml"
 		/>
 
-		<!-- <script type="text/partytown" src="fancy-analytics.js"></script> -->
 		<HeadHrefLangs />
 	</head>
 	<body class="w-full">
