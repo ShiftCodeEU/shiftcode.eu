@@ -3,7 +3,7 @@ const Copyright = () => {
 	const CurrentYear = new Date().getFullYear();
 	const CP =
 		CurrentYear == StartYear ? StartYear : `${StartYear} - ${CurrentYear}`;
-	return <>`${CP}`</>;
+	return <>{`${CP}`}</>;
 };
 
 export default Copyright;
