@@ -11,9 +11,6 @@ import sitemap from "@astrojs/sitemap";
 import astroI18next from "astro-i18next";
 
 // https://astro.build/config
-import partytown from "@astrojs/partytown";
-
-// https://astro.build/config
 import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
@@ -57,12 +54,6 @@ export default defineConfig({
 					es: "es-ES",
 					nl: "nl-NL"
 				}
-			}
-		}),
-		partytown({
-			// toggle debug mode.
-			config: {
-				debug: false
 			}
 		}),
 		tailwind({
