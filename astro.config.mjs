@@ -48,7 +48,7 @@ export default defineConfig({
 				 *	All urls that don't contain `es` or `fr` after `https://shiftcode.eu/`
 				 *	will be treated as default locale, i.e. `en`
 				 */
-				defaultLocale: "en-US",
+				defaultLocale: "en",
 				locales: {
 					// The `defaultLocale` value must present in `locales` keys
 					en: "en-US",
