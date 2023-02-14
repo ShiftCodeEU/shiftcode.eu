@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "astro dev",
 		"build": "astro-i18next generate && astro build",
-		"build:release": "pnpm run build && jampack ./dist",
+		"deploy": "vercel deploy --prebuilt --prod",
 		"preview": "astro preview",
 		"astro": "astro",
 		"lint": "prettier -w --plugin-search-dir=. ./src",
@@ -16,6 +16,7 @@
 		"@astrojs/react": "^2.0.2",
 		"@astrojs/sitemap": "^1.0.1",
 		"@astrojs/tailwind": "^3.0.1",
+		"@astrojs/vercel": "^3.1.1",
 		"@react-spring/web": "^9.6.1",
 		"astro": "^2.0.10",
 		"astro-i18next": "1.0.0-beta.17",
@@ -25,11 +26,11 @@
 		"i18next-fs-backend": "^2.1.1",
 		"module-alias": "^2.2.2",
 		"react": "^18.2.0",
-		"react-dom": "18.2.0"
+		"react-dom": "18.2.0",
+		"vercel": "^28.15.4"
 	},
 	"devDependencies": {
 		"@astrojs/compiler": "^1.1.0",
-		"@divriots/jampack": "0.9.1",
 		"@types/react": "^18.0.28",
 		"@types/react-dom": "18.0.10",
 		"@types/react-router-dom": "^5.3.3",

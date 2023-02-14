@@ -17,10 +17,13 @@ import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 
 // https://astro.build/config
+import vercel from "@astrojs/vercel/static";
 
 // https://astro.build/config
 export default defineConfig({
 	site: "https://shiftcode.eu",
+	output: "static",
+	adapter: vercel(),
 	integrations: [
 		astroI18next(),
 		prefetch({
@@ -45,7 +48,7 @@ export default defineConfig({
 				 *	All urls that don't contain `es` or `fr` after `https://shiftcode.eu/`
 				 *	will be treated as default locale, i.e. `en`
 				 */
-				defaultLocale: "en",
+				defaultLocale: "en-US",
 				locales: {
 					// The `defaultLocale` value must present in `locales` keys
 					"en-US": "en-US",

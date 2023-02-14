@@ -47,10 +47,10 @@ const Navbar = (props: { currentLang: string; languages: any }) => {
 							<a href="#">Item 3</a>
 						</li>
 						<li className="btn-dark">
-							<a>Item 1</a>
+							<a href="#">Item 1</a>
 						</li>
 						<li className="btn-dark">
-							<a>Item 2</a>
+							<a href="#">Item 2</a>
 						</li>
 					</ul>
 				</div>
@@ -78,7 +78,7 @@ const Navbar = (props: { currentLang: string; languages: any }) => {
 						<a href="#">Item 3</a>
 					</li>
 					<li className="btn-dark">
-						<a>Item 2</a>
+						<a href="#">Item 2</a>
 					</li>
 				</ul>
 			</div>
