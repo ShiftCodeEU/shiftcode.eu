@@ -1,6 +1,6 @@
 import LanguageSelector from "@components/i18n/parts/languageSelectbox";
 
-const Navbar = (props: { currentLang: string; languages: any[] }) => {
+const Navbar = (props: { currentLang: string; languages: any }) => {
 	// const hrefHandler = (pathName: string) => {
 	// 	if (typeof window !== "undefined") {
 	// 		const isDutch = pathName.startsWith("/nl-NL");
@@ -19,7 +19,7 @@ const Navbar = (props: { currentLang: string; languages: any[] }) => {
 						className="dropdown-content menu rounded-box menu-compact mt-3 w-52 bg-base-100 p-2 shadow"
 					>
 						<li>
-							<a>Item 1</a>
+							<a href="#">Item 1</a>
 						</li>
 						<li tabIndex={0}>
 							<a className="justify-between">
@@ -36,15 +36,15 @@ const Navbar = (props: { currentLang: string; languages: any[] }) => {
 							</a>
 							<ul className="p-2">
 								<li>
-									<a>Submenu 1</a>
+									<a href="#">Submenu 1</a>
 								</li>
 								<li>
-									<a>Submenu 2</a>
+									<a href="#">Submenu 2</a>
 								</li>
 							</ul>
 						</li>
 						<li>
-							<a>Item 3</a>
+							<a href="#">Item 3</a>
 						</li>
 					</ul>
 				</div>
@@ -55,21 +55,21 @@ const Navbar = (props: { currentLang: string; languages: any[] }) => {
 			<div className="navbar-center hidden lg:flex">
 				<ul className="menu menu-horizontal flex gap-2 px-1">
 					<li className="btn-dark">
-						<a>Item 1</a>
+						<a href="#">Item 1</a>
 					</li>
 					<li tabIndex={0} className="btn-dark">
 						<a className="btn-dark">Parent</a>
 						<ul className="mt-3 bg-base-100 p-2">
 							<li className="btn-dark ">
-								<a>Submenu 1</a>
+								<a href="#">Submenu 1</a>
 							</li>
 							<li className="btn-dark">
-								<a>Submenu 2</a>
+								<a href="#">Submenu 2</a>
 							</li>
 						</ul>
 					</li>
 					<li className="btn-dark">
-						<a>Item 3</a>
+						<a href="#">Item 3</a>
 					</li>
 				</ul>
 			</div>
