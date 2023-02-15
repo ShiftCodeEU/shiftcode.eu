@@ -1,5 +1,5 @@
 ---
-import tailwindCSS from "../../styles/tailwind.css";
+import "../../styles/tailwind.css";
 
 import i18next from "i18next";
 import { HeadHrefLangs } from "astro-i18next/components";
@@ -62,8 +62,6 @@ const supportedLanguages = i18next.languages;
 		/>
 
 		<HeadHrefLangs />
-
-		<link rel="stylesheet" href={tailwindCSS} />
 	</head>
 	<body class="w-full pb-2">
 		<PageTransition client:only="react">
