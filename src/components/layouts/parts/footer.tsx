@@ -5,7 +5,7 @@ const Footer = () => {
 		CurrentYear == StartYear ? StartYear : `${StartYear} - ${CurrentYear}`;
 
 	return (
-		<footer className="footer footer-center mb-2 rounded-xl bg-base-100 p-10 text-base-content">
+		<footer className="footer footer-center rounded-xl bg-base-100 p-10 text-base-content">
 			<div className="grid grid-flow-col gap-4">
 				<a href="#" className="link-hover link">
 					About us

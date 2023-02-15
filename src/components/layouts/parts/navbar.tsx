@@ -1,5 +1,8 @@
 import LanguageSelector from "@components/i18n/parts/languageSelectbox";
 
+import logo from "@src/images/small-base_icon_transparent_background.webp";
+import { RxHamburgerMenu } from "react-icons/rx";
+
 const Navbar = (props: { currentLang: string; languages: any }) => {
 	// const hrefHandler = (pathName: string) => {
 	// 	if (typeof window !== "undefined") {
@@ -12,39 +15,44 @@ const Navbar = (props: { currentLang: string; languages: any }) => {
 			<div className="navbar-start">
 				<div className="dropdown">
 					<label tabIndex={0} className="btn-dark btn lg:hidden">
-						Menu
+						<span className="px-2">
+							<RxHamburgerMenu />
+						</span>
 					</label>
-					<ul
+					<div
 						tabIndex={0}
 						className="dropdown-content menu rounded-box menu-compact mt-3 w-52 bg-base-100 p-2 shadow"
 					>
-						<li>
-							<a href="#">Item 1</a>
-						</li>
-						<li className="btn-dark">
-							<a href="#">Item 1</a>
-						</li>
-						<li className="btn-dark">
-							<a href="#">Item 2</a>
-						</li>
-					</ul>
+						<a className="btn-dark" href="#">
+							Item 1
+						</a>
+						<a className="btn-dark" href="#">
+							Item 1
+						</a>
+						<a className="btn-dark" href="#">
+							Item 2
+						</a>
+					</div>
 				</div>
-				<a href="/" className="cursor-pointer pl-2 text-xl normal-case">
-					ShiftCode
+				<a href="/" className="hidden lg:flex lg:pl-2">
+					<img src={logo} alt="ShiftCode" className="h-16" />
 				</a>
 			</div>
-			<div className="navbar-center hidden lg:flex">
-				<ul className="menu menu-horizontal flex gap-2 px-1">
-					<li className="btn-dark">
-						<a href="#">Item 1</a>
-					</li>
-					<li className="btn-dark">
-						<a href="#">Item 2</a>
-					</li>
-					<li className="btn-dark">
-						<a href="#">Item 3</a>
-					</li>
-				</ul>
+			<div className="navbar-center flex">
+				<div className="menu menu-horizontal hidden gap-2 lg:flex">
+					<a className="btn-dark" href="#">
+						Item 1
+					</a>
+					<a className="btn-dark" href="#">
+						Item 1
+					</a>
+					<a className="btn-dark" href="#">
+						Item 2
+					</a>
+				</div>
+				<a href="/" className="mx-auto flex lg:hidden lg:pl-2">
+					<img src={logo} alt="ShiftCode" className="h-12" />
+				</a>
 			</div>
 			<div className="navbar-end">
 				<LanguageSelector
