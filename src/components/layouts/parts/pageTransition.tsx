@@ -7,7 +7,7 @@ const PageTransition = (props: { children: any }) => {
 
 	return (
 		<div className="w-full px-2 pt-2 lg:pr-4">
-			<AnimatePresence mode="wait">
+			<AnimatePresence>
 				<motion.div
 					key={window.location.pathname}
 					initial="initialState"
