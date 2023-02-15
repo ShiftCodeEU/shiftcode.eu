@@ -73,7 +73,7 @@ const supportedLanguages = i18next.languages;
 			<main class="min-h-screen">
 				<slot />
 			</main>
-			<Footer />
+			<Footer client:only="react" />
 		</PageTransition>
 	</body>
 </html>
