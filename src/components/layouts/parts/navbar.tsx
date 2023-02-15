@@ -1,6 +1,8 @@
 import LanguageSelector from "@components/i18n/parts/languageSelectbox";
 
+import logoMobile from "@src/images/mobile-base_icon_transparent_background.webp";
 import logo from "@src/images/small-base_icon_transparent_background.webp";
+
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const Navbar = (props: { currentLang: string; languages: any }) => {
@@ -57,7 +59,7 @@ const Navbar = (props: { currentLang: string; languages: any }) => {
 				</div>
 				<a href="/" className="mx-auto flex lg:hidden lg:pl-2">
 					<img
-						src={logo}
+						src={logoMobile}
 						alt="ShiftCode"
 						height="59px"
 						width="45px"
