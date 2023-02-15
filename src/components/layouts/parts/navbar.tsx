@@ -35,7 +35,13 @@ const Navbar = (props: { currentLang: string; languages: any }) => {
 					</div>
 				</div>
 				<a href="/" className="hidden lg:flex lg:pl-2">
-					<img src={logo} alt="ShiftCode" className="h-16" />
+					<img
+						src={logo}
+						alt="ShiftCode"
+						className="h-16"
+						height="64px"
+						width="76px"
+					/>
 				</a>
 			</div>
 			<div className="navbar-center flex">
@@ -51,7 +57,13 @@ const Navbar = (props: { currentLang: string; languages: any }) => {
 					</a>
 				</div>
 				<a href="/" className="mx-auto flex lg:hidden lg:pl-2">
-					<img src={logo} alt="ShiftCode" className="h-12" />
+					<img
+						src={logo}
+						alt="ShiftCode"
+						className="h-12"
+						height="48px"
+						width="60px"
+					/>
 				</a>
 			</div>
 			<div className="navbar-end">
