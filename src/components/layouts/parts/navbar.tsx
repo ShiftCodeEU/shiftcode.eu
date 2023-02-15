@@ -61,8 +61,8 @@ const Navbar = (props: { currentLang: string; languages: any }) => {
 					<img
 						src={logoMobile}
 						alt="ShiftCode"
-						height="59px"
-						width="45px"
+						height="100%"
+						width="100%"
 					/>
 				</a>
 			</div>
