@@ -39,8 +39,8 @@ const Navbar = (props: { currentLang: string; languages: any }) => {
 						src={logo}
 						alt="ShiftCode"
 						className="h-16"
-						height="64px"
-						width="76px"
+						height="84px"
+						width="64px"
 					/>
 				</a>
 			</div>
@@ -61,8 +61,8 @@ const Navbar = (props: { currentLang: string; languages: any }) => {
 						src={logo}
 						alt="ShiftCode"
 						className="h-12"
-						height="48px"
-						width="60px"
+						height="45px"
+						width="59px"
 					/>
 				</a>
 			</div>
