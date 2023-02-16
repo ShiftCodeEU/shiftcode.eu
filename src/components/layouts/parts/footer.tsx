@@ -1,8 +1,7 @@
+import { Suspense } from "react";
+
 const Footer = () => {
 	const StartYear = 2023;
-	const CurrentYear = new Date().getFullYear();
-	const CP =
-		CurrentYear == StartYear ? StartYear : `${StartYear} - ${CurrentYear}`;
 
 	return (
 		<footer className="footer footer-center rounded-xl bg-base-100 p-10 text-base-content">
@@ -34,10 +33,18 @@ const Footer = () => {
 				</div>
 			</div>
 			<div>
-				<p>
-					Copyright &copy; {CP} | All right reserved by&nbsp;
-					<a href="/">ShiftCode Developments</a>
-				</p>
+				<Suspense fallback={StartYear}>
+					<p>
+						Copyright &copy;{" "}
+						{new Date().getFullYear() == StartYear
+							? StartYear
+							: StartYear +
+							  " - " +
+							  new Date().getFullYear().toString()}{" "}
+						| All right reserved by&nbsp;
+						<a href="/">ShiftCode Developments</a>
+					</p>
+				</Suspense>
 			</div>
 		</footer>
 	);
