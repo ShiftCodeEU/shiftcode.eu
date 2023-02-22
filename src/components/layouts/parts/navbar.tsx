@@ -6,12 +6,6 @@ import logo from "@src/images/small-base_icon_transparent_background.webp";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const Navbar = (props: { currentLang: string; languages: any }) => {
-	// const hrefHandler = (pathName: string) => {
-	// 	if (typeof window !== "undefined") {
-	// 		const isDutch = pathName.startsWith("/nl-NL");
-	// 	}
-	// };
-
 	return (
 		<div className="bg-glass-black navbar sticky top-2 z-50">
 			<div className="navbar-start">
