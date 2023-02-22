@@ -2,6 +2,7 @@
 	"name": "shortcode-web",
 	"type": "module",
 	"version": "0.0.1",
+	"private": true,
 	"scripts": {
 		"dev": "astro dev",
 		"build": "astro-i18next generate && astro build",
