@@ -15,7 +15,7 @@ const supportedLanguages = i18next.languages;
 <html lang={i18next.language}>
 	<head>
 		<title>{title}</title>
-		<meta charset="utf-8" />
+		<meta content="text/html" charset="utf-8" http-equiv="Content-Type" />
 
 		<meta name="description" content={desc} />
 
@@ -48,18 +48,11 @@ const supportedLanguages = i18next.languages;
 			href="/favicons/favicon-16x16.png"
 		/>
 
-		<link rel="manifest" href="/favicons/site.webmanifest" />
-
 		<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" />
 
 		<link rel="shortcut icon" href="/favicons/favicon.ico" />
 
 		<meta name="msapplication-TileColor" content="#000000" />
-
-		<meta
-			name="msapplication-config"
-			content="/favicons/browserconfig.xml"
-		/>
 
 		<HeadHrefLangs />
 	</head>
