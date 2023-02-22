@@ -58,11 +58,11 @@ const supportedLanguages = i18next.languages;
 	</head>
 	<body class="w-full pb-2">
 		<PageTransition client:only="react">
-			<NavBar
+			<!-- <NavBar
 				currentLang={i18next.language}
 				languages={supportedLanguages}
 				client:only="react"
-			/>
+			/> -->
 			<main class="min-h-screen">
 				<slot />
 			</main>
