@@ -1,6 +1,5 @@
 import LanguageSelector from "@components/i18n/parts/languageSelectbox";
 
-import logoMobile from "@src/images/mobile-base_icon_transparent_background.webp";
 import logo from "@src/images/small-base_icon_transparent_background.webp";
 
 const Navbar = (props: { currentLang: string; languages: any }) => {
@@ -64,13 +63,11 @@ const Navbar = (props: { currentLang: string; languages: any }) => {
 						Item 2
 					</a>
 				</div>
-				<a href="/" className="mx-auto flex lg:hidden lg:pl-2">
-					<img
-						src={logoMobile}
-						alt="ShiftCode"
-						height="45px"
-						width="59px"
-					/>
+				<a
+					href="/"
+					className="mx-auto flex bg-clip-text text-2xl text-secondary antialiased lg:hidden lg:pl-2"
+				>
+					SHIFTCODE
 				</a>
 			</div>
 			<div className="navbar-end">
