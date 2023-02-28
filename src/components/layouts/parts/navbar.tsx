@@ -1,6 +1,6 @@
-import LanguageSelector from "@components/i18n/parts/languageSelectbox";
+import LanguageSelector from "../../i18n/parts/languageSelectbox";
 
-import logo from "@src/images/small-base_icon_transparent_background.webp";
+import logo from "../../../images/small-base_icon_transparent_background.webp";
 
 const Navbar = (props: { currentLang: string; languages: any }) => {
 	return (

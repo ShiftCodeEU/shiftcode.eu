@@ -1,5 +1,4 @@
 import { defineConfig } from "astro/config";
-import "module-alias/register";
 
 // https://astro.build/config
 import prefetch from "@astrojs/prefetch";

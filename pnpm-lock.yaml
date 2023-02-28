@@ -13,13 +13,11 @@ specifiers:
   astro: ^2.0.14
   astro-i18next: 1.0.0-beta.17
   autoprefixer: ^10.4.13
-  country-flag-icons: ^1.5.5
   cssnano: ^5.1.15
   daisyui: ^2.50.2
   framer-motion: ^9.0.7
   i18next: ^22.4.10
   i18next-fs-backend: ^2.1.1
-  module-alias: ^2.2.2
   postcss: ^8.4.21
   prettier: ^2.8.4
   prettier-plugin-astro: ^0.8.0
@@ -27,7 +25,6 @@ specifiers:
   prettier-plugin-tailwindcss: ^0.2.3
   react: ^18.2.0
   react-dom: 18.2.0
-  react-icons: ^4.7.1
   tailwind-scrollbar: ^2.1.0
   tailwindcss: 3.2.7
   typescript: ^4.9.5
@@ -38,14 +35,11 @@ dependencies:
   '@astrojs/react': 2.0.2_3xleytyzprlgycb2ded54tx72i
   astro: 2.0.14
   astro-i18next: 1.0.0-beta.17_astro@2.0.14
-  country-flag-icons: 1.5.5
   framer-motion: 9.0.7_biqbaboplfbrettd7655fr4n2y
   i18next: 22.4.10
   i18next-fs-backend: 2.1.1
-  module-alias: 2.2.2
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
-  react-icons: 4.7.1_react@18.2.0
 
 devDependencies:
   '@astrojs/compiler': 1.1.1
@@ -3371,10 +3365,6 @@ packages:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
     dev: true
 
-  /country-flag-icons/1.5.5:
-    resolution: {integrity: sha512-k4WXZ/WvWOSiYXRG1n8EYHNr1m/IX0GffKqAidaet5DrJsDOmJ8Q/8JvvONhZNnKYg24s4lvsm+9og1HcuIU/g==}
-    dev: false
-
   /create-require/1.1.1:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
     dev: true
@@ -6193,10 +6183,6 @@ packages:
       ufo: 1.1.0
     dev: true
 
-  /module-alias/2.2.2:
-    resolution: {integrity: sha512-A/78XjoX2EmNvppVWEhM2oGk3x4lLxnkEA4jTbaK97QKSDjkIoOsKQlfylt/d3kKKi596Qy3NP5XrXJ6fZIC9Q==}
-    dev: false
-
   /mri/1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
     engines: {node: '>=4'}
@@ -7285,14 +7271,6 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
-    dev: false
-
-  /react-icons/4.7.1_react@18.2.0:
-    resolution: {integrity: sha512-yHd3oKGMgm7zxo3EA7H2n7vxSoiGmHk5t6Ou4bXsfcgWyhfDKMpyKfhHR6Bjnn63c+YXBLBPUql9H4wPJM6sXw==}
-    peerDependencies:
-      react: '*'
-    dependencies:
-      react: 18.2.0
     dev: false
 
   /react/18.2.0:
