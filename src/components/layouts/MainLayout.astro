@@ -61,12 +61,12 @@ const supportedLanguages = i18next.languages;
 			<NavBar
 				currentLang={i18next.language}
 				languages={supportedLanguages}
-				client:visible
+				client:load
 			/>
 			<main class="min-h-screen">
 				<slot />
 			</main>
-			<Footer client:visible />
+			<Footer client:load />
 		</PageTransition>
 	</body>
 </html>
