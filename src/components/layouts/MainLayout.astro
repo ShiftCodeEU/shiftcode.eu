@@ -4,7 +4,7 @@ import "../../styles/tailwind.css";
 import i18next from "i18next";
 import { HeadHrefLangs } from "astro-i18next/components";
 
-import NavBar from "./parts/navbar";
+import NavBar from "./parts/navbar.astro";
 import Footer from "./parts/footer";
 import PageTransition from "./parts/pageTransition";
 
@@ -57,16 +57,17 @@ const supportedLanguages = i18next.languages;
 		<HeadHrefLangs />
 	</head>
 	<body class="w-full pb-2">
-		<PageTransition client:only="react">
-			<NavBar
-				currentLang={i18next.language}
-				languages={supportedLanguages}
-				client:load
-			/>
+		<PageTransition client:only>
 			<main class="min-h-screen">
-				<slot />
+				<NavBar
+					currentLang={i18next.language}
+					languages={supportedLanguages}
+				/>
+				<div class="min-h-screen">
+					<slot />
+				</div>
+				<Footer client:visible />
 			</main>
-			<Footer client:load />
 		</PageTransition>
 	</body>
 </html>

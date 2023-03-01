@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 
-const PageTransition = (props: { children: any }) => {
+const PageTransition = ({ children }: { children: Element }) => {
 	const Children = (props: { childElements: any }) => {
 		return <>{props.childElements}</>;
 	};
@@ -31,7 +31,7 @@ const PageTransition = (props: { children: any }) => {
 						}
 					}}
 				>
-					<Children childElements={props.children} />
+					<Children childElements={children} />
 				</motion.div>
 			</AnimatePresence>
 		</div>

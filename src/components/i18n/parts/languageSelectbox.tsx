@@ -131,7 +131,7 @@ const LanguageSelectbox = (props: {
 	};
 
 	return (
-		<div className="dropdown dropdown-bottom dropdown-end dropdown-hover">
+		<div className="dropdown-hover dropdown-bottom dropdown-end dropdown">
 			<label tabIndex={0} className="btn m-1">
 				<ShowFlag langCode={defaultVal} />
 			</label>
