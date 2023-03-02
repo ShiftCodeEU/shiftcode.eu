@@ -1,10 +1,9 @@
+"use client";
+
 import { AnimatePresence, motion } from "framer-motion";
+import { type ReactNode } from "react";
 
-const PageTransition = ({ children }: { children: Element }) => {
-	const Children = (props: { childElements: any }) => {
-		return <>{props.childElements}</>;
-	};
-
+const PageTransition = ({ children }: { children: ReactNode }) => {
 	return (
 		<div className="w-full px-2 pt-2 lg:pr-4">
 			<AnimatePresence>
@@ -31,7 +30,7 @@ const PageTransition = ({ children }: { children: Element }) => {
 						}
 					}}
 				>
-					<Children childElements={children} />
+					{children}
 				</motion.div>
 			</AnimatePresence>
 		</div>

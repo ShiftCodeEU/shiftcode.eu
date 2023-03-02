@@ -1,7 +1,10 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const tailwindScrollbar = require("tailwind-scrollbar")({ nocompatible: true });
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: [
-		"./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
+		"./src/**/*.{js,jsx,md,mdx,ts,tsx}",
 		"./node_modules/flowbite/**/*.js"
 	],
 	theme: {
@@ -28,8 +31,5 @@ module.exports = {
 			}
 		]
 	},
-	plugins: [
-		require("daisyui"),
-		require("tailwind-scrollbar")({ nocompatible: true })
-	]
+	plugins: [require("daisyui"), tailwindScrollbar]
 };

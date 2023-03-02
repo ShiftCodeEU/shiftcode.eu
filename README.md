@@ -7,12 +7,9 @@
   <a href="https://github.com/ShiftCodeEU/shiftcode.eu/actions/workflows/workspace-ci.yml">
     <img src="https://github.com/ShiftCodeEU/shiftcode.eu/actions/workflows/workspace-ci.yml/badge.svg?branch=main"/>
   </a>
-  <!-- <a href="https://twitter.com/GlitchTechEU" target="_blank">
-    <img alt="Twitter: GlitchTechEU" src="https://img.shields.io/twitter/follow/GlitchTechEU.svg?style=social" />
-  </a> -->
 </p>
 
-> Astro website using TypeScript and Tailwind for the shiftcode.eu domain
+> Website using TypeScript and Tailwind for the shiftcode.eu domain
 
 ## Install
 
@@ -37,7 +34,6 @@ pnpm run lint
 👤 **GlitchTech Developments**
 
 -   Website: https://shiftcode.eu
-<!-- -   Twitter: [@GlitchTechEU](https://twitter.com/GlitchTechEU) -->
 -   Github: [@ShiftCodeEU](https://github.com/ShiftCodeEU)
 
 ## 🤝 Contributing
