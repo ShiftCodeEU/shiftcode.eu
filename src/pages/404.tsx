@@ -13,6 +13,7 @@ const NotFound = () => {
 	return (
 		<html lang="en-US">
 			<Head>
+				<title>Not Found | ShiftCode Developments</title>
 				<meta charSet="UTF-8" />
 				<meta name="description" content="No desc yet, still in dev" />
 

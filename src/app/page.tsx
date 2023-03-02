@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Logo from "../images/color2-white_logo_transparent_background.webp";
 
+export const metadata = {
+	title: "Home | ShiftCode Developments"
+};
+
 const Home = () => {
 	return (
 		<div className="mt-2 flex h-full w-full flex-col">

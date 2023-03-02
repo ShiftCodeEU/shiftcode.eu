@@ -70,9 +70,7 @@ const Navbar = () => {
 					SHIFTCODE
 				</a>
 			</div>
-			<div className="navbar-end">
-				<>--</>
-			</div>
+			<div className="navbar-end"></div>
 		</div>
 	);
 };
