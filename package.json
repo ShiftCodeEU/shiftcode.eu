@@ -39,6 +39,9 @@
 	"browserslist": [
 		">0.3%",
 		"last 2 major versions",
-		"not dead"
+		"not dead",
+		"not IE <= 11",
+		"not EDGE <= 18",
+		"not op_mini all"
 	]
 }
