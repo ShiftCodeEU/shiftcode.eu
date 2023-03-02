@@ -15,7 +15,7 @@ const Home = () => {
 							<Image
 								id="logo1"
 								src={Logo}
-								placeholder="blur"
+								priority={true}
 								alt="Shiftcode Developments"
 								className="z-0 m-auto h-32 w-auto"
 							/>
@@ -58,7 +58,7 @@ const Home = () => {
 						<Image
 							id="logo1_alt"
 							src={Logo}
-							placeholder="blur"
+							priority={true}
 							alt="Shiftcode Developments"
 							className="image-full absolute z-0 m-auto h-full w-auto transition-[filter] duration-500 ease-linear hover:hue-rotate-90"
 						/>
