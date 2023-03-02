@@ -38,9 +38,9 @@ const Footer = () => {
 						Copyright &copy;{" "}
 						{new Date().getFullYear() == StartYear
 							? StartYear
-							: StartYear +
+							: StartYear.toString() +
 							  " - " +
-							  new Date().getFullYear().toString()}{" "}
+							  new Date().getFullYear().toString()}
 						| All right reserved by&nbsp;
 						<a href="/">ShiftCode Developments</a>
 					</p>
