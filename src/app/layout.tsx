@@ -1,6 +1,7 @@
 import "~/styles/tailwind.css";
 
 import dynamic from "next/dynamic";
+
 import Footer from "~/components/layouts/parts/footer";
 import Navbar from "~/components/layouts/parts/navbar";
 const PageTransition = dynamic(
