@@ -4,7 +4,7 @@ const Footer = () => {
 	const StartYear = 2023;
 
 	return (
-		<footer className="footer footer-center rounded-xl bg-base-100 p-10 text-base-content">
+		<footer className="footer footer-center rounded-xl bg-[rgba(0,0,0,0.8)] p-10 text-base-content">
 			<div className="grid grid-flow-col gap-4">
 				<a href="#" className="link-hover link">
 					About us
@@ -40,8 +40,8 @@ const Footer = () => {
 							? StartYear
 							: StartYear.toString() +
 							  " - " +
-							  new Date().getFullYear().toString()}
-						{" "}| All right reserved by&nbsp;
+							  new Date().getFullYear().toString()}{" "}
+						| All right reserved by&nbsp;
 						<a href="/">ShiftCode Developments</a>
 					</p>
 				</Suspense>
