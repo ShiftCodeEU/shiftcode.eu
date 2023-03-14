@@ -41,7 +41,7 @@ const Footer = () => {
 							: StartYear.toString() +
 							  " - " +
 							  new Date().getFullYear().toString()}
-						| All right reserved by&nbsp;
+						{" "}| All right reserved by&nbsp;
 						<a href="/">ShiftCode Developments</a>
 					</p>
 				</Suspense>
