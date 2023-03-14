@@ -5,7 +5,7 @@ import { type ReactNode } from "react";
 
 const PageTransition = ({ children }: { children: ReactNode }) => {
 	return (
-		<div className="w-full px-2 pt-2 lg:pr-4">
+		<div className="w-full px-2 pt-2 lg:pr-3">
 			<AnimatePresence>
 				<motion.div
 					key={window.location.pathname}
