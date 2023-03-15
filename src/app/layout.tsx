@@ -1,13 +1,11 @@
 import "~/styles/tailwind.css";
 
-import dynamic from "next/dynamic";
-
-import Footer from "~/components/layouts/parts/footer";
-import Navbar from "~/components/layouts/parts/navbar";
-const PageTransition = dynamic(
-	() => import("~/components/layouts/parts/pageTransition"),
-	{ ssr: false }
-);
+export const metadata = {
+	title: {
+		default: "ShiftCode Developments",
+		template: "%s | ShiftCode Developments"
+	}
+};
 
 const Rootlayout = ({
 	children // will be a page or nested layout
@@ -17,9 +15,6 @@ const Rootlayout = ({
 	return (
 		<html lang="en-US">
 			<head>
-				<meta charSet="UTF-8" />
-				<meta name="description" content="No desc yet, still in dev" />
-
 				<meta
 					name="viewport"
 					content="width=device-width, initial-scale=1"
@@ -52,13 +47,7 @@ const Rootlayout = ({
 				<meta name="msapplication-TileColor" content="#000000" />
 			</head>
 			<body className="w-full pb-2">
-				<PageTransition>
-					<main className="min-h-screen">
-						<Navbar />
-						<div className="min-h-screen">{children}</div>
-						<Footer />
-					</main>
-				</PageTransition>
+				<main className="min-h-screen">{children}</main>
 			</body>
 		</html>
 	);

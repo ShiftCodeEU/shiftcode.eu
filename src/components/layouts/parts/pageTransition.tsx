@@ -4,16 +4,27 @@ import { AnimatePresence, motion } from "framer-motion";
 import { type ReactNode } from "react";
 
 const PageTransition = ({ children }: { children: ReactNode }) => {
+	let windowRef = {
+		location: {
+			pathname: ""
+		}
+	};
+
+	if (typeof window !== "undefined") {
+		windowRef = window;
+	}
+
 	return (
-		<div className="w-full px-2 pt-2 lg:pr-3">
+		<div className="w-full">
 			<AnimatePresence>
 				<motion.div
-					key={window.location.pathname}
+					key={windowRef.location.pathname}
 					initial="initialState"
 					animate="animateState"
 					exit="exitState"
 					transition={{
-						duration: 0.75
+						duration: 0.7,
+						ease: "easeInOut"
 					}}
 					variants={{
 						initialState: {
@@ -29,6 +40,7 @@ const PageTransition = ({ children }: { children: ReactNode }) => {
 							top: -50
 						}
 					}}
+					className="absolute w-full px-2 pt-2 lg:pr-3"
 				>
 					{children}
 				</motion.div>

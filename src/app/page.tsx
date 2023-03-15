@@ -2,7 +2,11 @@ import Image from "next/image";
 import Logo from "../images/color2-white_logo_transparent_background.webp";
 
 export const metadata = {
-	title: "Home | ShiftCode Developments"
+	title: {
+		absolute: "ShiftCode Developments"
+	},
+	description:
+		"Welcome to ShiftCode Developments, we build websites, web apps and native apps with the hottest in latest tech."
 };
 
 const Home = () => {
