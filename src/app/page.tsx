@@ -24,13 +24,13 @@ const Home = () => {
 								className="z-0 m-auto h-32 w-auto"
 							/>
 						</div>
-						<h1 className="mb-4 max-w-2xl text-3xl font-extrabold leading-none tracking-tight text-white md:text-5xl xl:text-6xl">
+						<h2 className="mb-4 max-w-2xl text-3xl font-extrabold leading-none tracking-tight text-white md:text-5xl xl:text-6xl">
 							Welcome to ShiftCode!
-						</h1>
-						<p className="mb-6 max-w-3xl font-light text-gray-200 md:text-lg lg:mb-8 lg:text-xl">
+						</h2>
+						<h1 className="mb-6 max-w-3xl font-light text-gray-200 md:text-lg lg:mb-8 lg:text-xl">
 							From websites, web-apps and one-pagers to native
 							mobile & desktop applications.
-						</p>
+						</h1>
 						<div className="flex flex-col gap-2 lg:flex-row">
 							<a
 								href="#"
