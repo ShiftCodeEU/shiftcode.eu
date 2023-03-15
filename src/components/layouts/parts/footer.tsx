@@ -1,5 +1,3 @@
-import { Suspense } from "react";
-
 const Footer = () => {
 	const StartYear = 2023;
 
@@ -33,18 +31,16 @@ const Footer = () => {
 				</div>
 			</div>
 			<div>
-				<Suspense fallback={StartYear}>
-					<p>
-						Copyright &copy;{" "}
-						{new Date().getFullYear() == StartYear
-							? StartYear
-							: StartYear.toString() +
-							  " - " +
-							  new Date().getFullYear().toString()}{" "}
-						| All right reserved by&nbsp;
-						<a href="/">ShiftCode Developments</a>
-					</p>
-				</Suspense>
+				<p>
+					Copyright &copy;{" "}
+					{new Date().getFullYear() == StartYear
+						? StartYear
+						: StartYear.toString() +
+						  " - " +
+						  new Date().getFullYear().toString()}{" "}
+					| All right reserved by&nbsp;
+					<a href="/">ShiftCode Developments</a>
+				</p>
 			</div>
 		</footer>
 	);

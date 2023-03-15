@@ -1,11 +1,12 @@
-import "~/styles/tailwind.css";
+import "@/styles/tailwind.css";
 
+import Footer from "@/components/layouts/parts/footer";
+import Navbar from "@/components/layouts/parts/navbar";
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import Footer from "~/components/layouts/parts/footer";
-import Navbar from "~/components/layouts/parts/navbar";
+
 const PageTransition = dynamic(
-	() => import("~/components/layouts/parts/pageTransition"),
+	() => import("@/components/layouts/parts/pageTransition"),
 	{ ssr: false }
 );
 

@@ -1,5 +1,3 @@
-import "~/styles/tailwind.css";
-
 export const metadata = {
 	title: {
 		default: "ShiftCode Developments",

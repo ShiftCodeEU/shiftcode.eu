@@ -1,5 +1,5 @@
+import Logo from "@/images/color2-white_logo_transparent_background.webp";
 import Image from "next/image";
-import Logo from "../images/color2-white_logo_transparent_background.webp";
 
 export const metadata = {
 	title: {
