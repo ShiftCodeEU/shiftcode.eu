@@ -4,9 +4,7 @@ import Image from "next/image";
 export const metadata = {
 	title: {
 		absolute: "ShiftCode Developments"
-	},
-	description:
-		"Welcome to ShiftCode Developments, we build websites, web apps and native apps with the hottest in latest tech."
+	}
 };
 
 const Home = () => {

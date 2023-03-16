@@ -1,5 +1,6 @@
 import logo from "@/images/small-base_icon_transparent_background.webp";
 import Image from "next/image";
+import { NavigationMenuGeneric } from "../generics/navMenu";
 
 const Navbar = () => {
 	return (
@@ -52,7 +53,7 @@ const Navbar = () => {
 				</a>
 			</div>
 			<div className="navbar-center flex">
-				<div className="menu menu-horizontal hidden gap-2 lg:flex">
+				{/* <div className="menu menu-horizontal hidden gap-2 lg:flex">
 					<a className="btn-dark" href="#">
 						Item 1
 					</a>
@@ -62,7 +63,8 @@ const Navbar = () => {
 					<a className="btn-dark" href="#">
 						Item 2
 					</a>
-				</div>
+				</div> */}
+				<NavigationMenuGeneric />
 				<a
 					href="/"
 					className="mx-auto flex bg-clip-text text-2xl text-secondary antialiased lg:hidden lg:pl-2"

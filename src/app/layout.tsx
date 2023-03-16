@@ -2,7 +2,9 @@ export const metadata = {
 	title: {
 		default: "ShiftCode Developments",
 		template: "%s | ShiftCode Developments"
-	}
+	},
+	description:
+		"Welcome to ShiftCode Developments, we build websites, web apps and native apps with the hottest in latest tech."
 };
 
 const Rootlayout = ({
