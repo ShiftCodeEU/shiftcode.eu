@@ -64,7 +64,9 @@ const Navbar = () => {
 						Item 2
 					</a>
 				</div> */}
-				<NavigationMenuGeneric />
+				<div className="hidden lg:flex">
+					<NavigationMenuGeneric />
+				</div>
 				<a
 					href="/"
 					className="mx-auto flex bg-clip-text text-2xl text-secondary antialiased lg:hidden lg:pl-2"
