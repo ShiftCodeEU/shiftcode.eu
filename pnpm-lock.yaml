@@ -18,7 +18,7 @@ specifiers:
   eslint: ^8.36.0
   eslint-config-next: ^13.2.4
   flowbite: ^1.6.4
-  framer-motion: ^10.3.1
+  framer-motion: ^10.4.0
   lucide-react: ^0.125.0
   next: canary
   postcss: ^8.4.21
@@ -39,7 +39,7 @@ dependencies:
   '@radix-ui/react-popover': 1.0.5_zula6vjvt3wdocc4mwcxqa6nzi
   class-variance-authority: 0.4.0_typescript@4.9.5
   clsx: 1.2.1
-  framer-motion: 10.3.1_biqbaboplfbrettd7655fr4n2y
+  framer-motion: 10.4.0_biqbaboplfbrettd7655fr4n2y
   lucide-react: 0.125.0_react@18.2.0
   next: 13.2.5-canary.4_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
@@ -5167,8 +5167,8 @@ packages:
     resolution: {integrity: sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==}
     dev: true
 
-  /framer-motion/10.3.1_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-z90Dwg2adrltIdYiibynBN+EbSRrakFKGgOnE5TN24E1bmb2TdpfzFqvwxLTvvMimh+/yN43njMFKFKe2CkY/g==}
+  /framer-motion/10.4.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-nhQTbtRxaE7eoNuFeDpp0CdDMHWV5WIKZtV1CSD+zbVZzp5I0vmagOdCTivgBVKgA3ErJH5fIFf8l9FILTYKHQ==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
