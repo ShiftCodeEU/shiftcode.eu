@@ -12,7 +12,8 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				accentAlt: "#271d3b"
+				accentAlt: "#271d3b",
+				accentAltDark: "#291f29"
 			},
 			// fontFamily: {
 			// 	sans: ["var(--font-sans)", ...fontFamily.sans]

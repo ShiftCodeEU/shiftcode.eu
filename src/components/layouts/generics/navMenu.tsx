@@ -58,7 +58,7 @@ export const NavigationMenuGeneric = () => {
 			<NavigationMenuList>
 				<NavigationMenuItem>
 					<NavigationMenuTrigger>
-						Getting started
+						Follow the code!
 					</NavigationMenuTrigger>
 					<NavigationMenuContent>
 						<ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -69,32 +69,37 @@ export const NavigationMenuGeneric = () => {
 										href="/"
 									>
 										<div className="mt-4 mb-2 text-lg font-medium text-white">
-											shadcn/ui
+											ShiftCode
 										</div>
 										<p className="text-sm leading-tight text-white/90">
-											Beautifully designed components
-											built with Radix UI and Tailwind
-											CSS.
+											Building web, app and software using
+											the latest technologies.
 										</p>
 									</a>
 								</NavigationMenuLink>
 							</li>
-							<ListItem href="/showcase" title="Introduction">
-								Re-usable components built using Radix UI and
-								Tailwind CSS.
+							<ListItem
+								href="https://github.com/ShiftCodeEU"
+								title="Github"
+							>
+								On our Github you&apos;ll be able to check out
+								our open-source projects and it&apos;s
+								source-code.
 							</ListItem>
-							<ListItem href="/showcase" title="Installation">
-								How to install dependencies and structure your
-								app.
+							<ListItem href="/showcase" title="Twitter">
+								Feel free to hit us up on twitter with some
+								meme&apos;s, general question of just to check
+								our tweets!
 							</ListItem>
-							<ListItem href="/showcase" title="Typography">
-								Styles for headings, paragraphs, lists...etc
+							<ListItem href="/showcase" title="Source-code">
+								Want to check out the source of our website?
+								Feel free to check it out!
 							</ListItem>
 						</ul>
 					</NavigationMenuContent>
 				</NavigationMenuItem>
 				<NavigationMenuItem>
-					<NavigationMenuTrigger>Components</NavigationMenuTrigger>
+					<NavigationMenuTrigger>Showcase</NavigationMenuTrigger>
 					<NavigationMenuContent>
 						<ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
 							{navItems.map((component) => (
@@ -114,7 +119,7 @@ export const NavigationMenuGeneric = () => {
 						<NavigationMenuLink
 							className={navigationMenuTriggerStyle()}
 						>
-							Documentation
+							Docs Hub
 						</NavigationMenuLink>
 					</Link>
 				</NavigationMenuItem>

@@ -25,7 +25,8 @@ const config = {
 				fixStyle: "inline-type-imports"
 			}
 		]
-	}
+	},
+	ignorePatterns: ["tailwind.config.js", "next.config.mjs"]
 };
 
 module.exports = config;
