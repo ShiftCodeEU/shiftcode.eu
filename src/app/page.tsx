@@ -17,7 +17,8 @@ const Home = () => {
 							<Image
 								id="logo1"
 								src={Logo}
-								priority={true}
+								placeholder="blur"
+								blurDataURL="|B98k^}^idofofofe.bFRQofj[ayayayj[j[f7ayS1NGH@I.IANFRjWBkVf*ayjZkCfPaeayj[jtH@NGMxafx[xHyCxatRofofWBV@fkozjZaefktkofjZo2tks:ozkCVtkCaeayozj[WBfkj@j[RjR*RPbGtQoLaeaeoz"
 								alt="Shiftcode Developments"
 								className="z-0 m-auto h-32 w-auto"
 							/>
@@ -60,7 +61,8 @@ const Home = () => {
 						<Image
 							id="logo1_alt"
 							src={Logo}
-							priority={true}
+							placeholder="blur"
+							blurDataURL="|B98k^}^idofofofe.bFRQofj[ayayayj[j[f7ayS1NGH@I.IANFRjWBkVf*ayjZkCfPaeayj[jtH@NGMxafx[xHyCxatRofofWBV@fkozjZaefktkofjZo2tks:ozkCVtkCaeayozj[WBfkj@j[RjR*RPbGtQoLaeaeoz"
 							alt="Shiftcode Developments"
 							className="image-full absolute z-0 m-auto h-full w-auto transition-[filter] duration-500 ease-linear hover:hue-rotate-90"
 						/>
