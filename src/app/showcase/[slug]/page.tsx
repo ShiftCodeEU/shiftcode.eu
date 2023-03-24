@@ -3,14 +3,10 @@ import {
 	getShowcaseMetaData,
 	isShowcaseSlugValid
 } from "@/data/dataHelpers";
-import { notFound } from "next/navigation";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 
-export async function generateMetadata({
-	params
-}: {
-	params: { slug: String };
-}) {
+export function generateMetadata({ params }: { params: { slug: string } }) {
 	return {
 		title: getShowcaseMetaData(params.slug)?.title,
 		description:
@@ -18,8 +14,8 @@ export async function generateMetadata({
 	};
 }
 
-const Showcase = async ({ params }: { params: { slug: String } }) => {
-	const slug = params.slug as string;
+const Showcase = ({ params }: { params: { slug: string } }) => {
+	const slug = params.slug;
 	const pageData = getShowcaseMetaData(slug);
 
 	if (!slug || isShowcaseSlugValid(slug) == undefined) {

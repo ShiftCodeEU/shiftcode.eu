@@ -1,6 +1,6 @@
 import { availableShowcaseMeta, availableShowcaseSlugs } from "./pageData";
 
-export const getShowcaseMetaData = (slugString: String) => {
+export const getShowcaseMetaData = (slugString: string) => {
 	const getMData = availableShowcaseMeta.find((item) => {
 		if (item.slug == slugString) {
 			return item;

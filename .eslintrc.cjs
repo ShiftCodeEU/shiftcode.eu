@@ -24,7 +24,8 @@ const config = {
 				prefer: "type-imports",
 				fixStyle: "inline-type-imports"
 			}
-		]
+		],
+		"@next/next/no-html-link-for-pages": 0
 	},
 	ignorePatterns: ["tailwind.config.js", "next.config.mjs"]
 };
