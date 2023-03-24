@@ -2,9 +2,9 @@
 const config = {
 	reactStrictMode: true,
 	swcMinify: true,
-	compiler: {
-		removeConsole: true
-	},
+	// compiler: {
+	// 	removeConsole: true
+	// },
 	compress: true,
 	experimental: {
 		appDir: true,

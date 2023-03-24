@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+// import Link from "next/link";
 import * as React from "react";
 
 import {
@@ -9,46 +9,47 @@ import {
 	NavigationMenuItem,
 	NavigationMenuLink,
 	NavigationMenuList,
-	NavigationMenuTrigger,
-	navigationMenuTriggerStyle
+	NavigationMenuTrigger
+	// navigationMenuTriggerStyle
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/cn";
 
 const navItems: { title: string; href: string; description: string }[] = [
+	// {
+	// 	title: "Alert Dialog",
+	// 	href: "/showcase",
+	// 	description:
+	// 		"A modal dialog that interrupts the user with important content and expects a response."
+	// },
+	// {
+	// 	title: "Hover Card",
+	// 	href: "/showcase",
+	// 	description:
+	// 		"For sighted users to preview content available behind a link."
+	// },
+	// {
+	// 	title: "Progress",
+	// 	href: "/showcase",
+	// 	description:
+	// 		"Displays an indicator showing the completion progress of a task, typically displayed as a progress bar."
+	// },
 	{
-		title: "Alert Dialog",
-		href: "/showcase",
+		title: "HardwareHulp",
+		href: "/showcase/hardwarehulp",
 		description:
-			"A modal dialog that interrupts the user with important content and expects a response."
+			"A Next.js rebuild of my HardwareHulp website. HardwareHulp offers cheap hosting and IT support combined with custom computers."
 	},
 	{
-		title: "Hover Card",
-		href: "/showcase",
+		title: "My personal website",
+		href: "/showcase/jkinsight",
 		description:
-			"For sighted users to preview content available behind a link."
+			"Simple Next.js website which basically functions like a LinkTree page. An easy way to share my details by one simple webpage address."
 	},
 	{
-		title: "Progress",
-		href: "/showcase",
+		title: "ShiftCode Developments",
+		href: "/showcase/shiftcode-developments",
 		description:
-			"Displays an indicator showing the completion progress of a task, typically displayed as a progress bar."
-	},
-	{
-		title: "Scroll-area",
-		href: "/showcase",
-		description: "Visually or semantically separates content."
-	},
-	{
-		title: "Tabs",
-		href: "/showcase",
-		description:
-			"A set of layered sections of content—known as tab panels—that are displayed one at a time."
-	},
-	{
-		title: "Tooltip",
-		href: "/showcase",
-		description:
-			"A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it."
+			"This website is also build with Next.js, but this time using the (currently WIP) app directory."
 	}
 ];
 
@@ -86,12 +87,18 @@ export const NavigationMenuGeneric = () => {
 								our open-source projects and it&apos;s
 								source-code.
 							</ListItem>
-							<ListItem href="/showcase" title="Twitter">
+							<ListItem
+								href="https://jkinsight.nl"
+								title="Who is ShiftCode?"
+							>
 								Feel free to hit us up on twitter with some
 								meme&apos;s, general question of just to check
 								our tweets!
 							</ListItem>
-							<ListItem href="/showcase" title="Source-code">
+							<ListItem
+								href="https://github.com/ShiftCodeEU/shiftcode.eu"
+								title="SourceCode"
+							>
 								Want to check out the source of our website?
 								Feel free to check it out!
 							</ListItem>
@@ -114,7 +121,7 @@ export const NavigationMenuGeneric = () => {
 						</ul>
 					</NavigationMenuContent>
 				</NavigationMenuItem>
-				<NavigationMenuItem>
+				{/* <NavigationMenuItem>
 					<Link href="/showcase" legacyBehavior passHref>
 						<NavigationMenuLink
 							className={navigationMenuTriggerStyle()}
@@ -122,7 +129,7 @@ export const NavigationMenuGeneric = () => {
 							Docs Hub
 						</NavigationMenuLink>
 					</Link>
-				</NavigationMenuItem>
+				</NavigationMenuItem> */}
 			</NavigationMenuList>
 		</NavigationMenu>
 	);
