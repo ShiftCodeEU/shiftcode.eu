@@ -5,7 +5,8 @@
 	"scripts": {
 		"dev": "next dev",
 		"start": "next start",
-		"build": "next build && jampack ./.next",
+		"build": "next build",
+		"build:prodExport": "next build && jampack ./.next",
 		"lint": "next lint"
 	},
 	"dependencies": {
