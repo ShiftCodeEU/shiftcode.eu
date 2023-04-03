@@ -6,13 +6,13 @@ import {
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
+export const generateMetadata = ({ params }: { params: { slug: string } }) => {
 	return {
 		title: getShowcaseMetaData(params.slug)?.title,
 		description:
 			"These projects are just some of the interesting ones we've worked on. Feel free to have a look around!"
 	};
-}
+};
 
 const Showcase = ({ params }: { params: { slug: string } }) => {
 	const slug = params.slug;
@@ -58,12 +58,7 @@ const Showcase = ({ params }: { params: { slug: string } }) => {
 								width={1200}
 								alt="showcase on desktop"
 								className="h-auto w-full border-t border-accent"
-								blurDataURL={
-									getPageImageByName(
-										pageData.images,
-										"showcase-desktop"
-									)?.blurHash
-								}
+								blurDataURL="https://placehold.co/1200x600/webp?text=Loading..."
 								placeholder="blur"
 							/>
 						</div>
@@ -89,12 +84,7 @@ const Showcase = ({ params }: { params: { slug: string } }) => {
 								style={{ width: "268px" }}
 								alt="showcase on desktop"
 								className="phone-1 artboard  artboard-demo mx-auto mt-6"
-								blurDataURL={
-									getPageImageByName(
-										pageData.images,
-										"showcase-desktop"
-									)?.blurHash
-								}
+								blurDataURL="https://placehold.co/1200x600/webp?text=Loading..."
 								placeholder="blur"
 							/>
 						</div>

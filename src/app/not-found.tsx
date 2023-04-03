@@ -1,3 +1,5 @@
+"use client";
+
 const NotFound = () => {
 	return (
 		<div className="min-h-screen">

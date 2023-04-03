@@ -7,8 +7,7 @@ const config = {
 	// },
 	compress: true,
 	experimental: {
-		appDir: true,
-		typedRoutes: true
+		appDir: true
 	}
 };
 export default config;
