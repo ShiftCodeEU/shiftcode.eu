@@ -7,7 +7,8 @@
 		"start": "next start",
 		"build": "next build",
 		"build:prodExport": "next build && jampack ./out",
-		"lint": "next lint"
+		"lint": "next lint",
+		"force-upgrade": "pnpm install next@canary react@next react-dom@next"
 	},
 	"dependencies": {
 		"@radix-ui/react-navigation-menu": "1.1.2",
@@ -16,9 +17,9 @@
 		"clsx": "^1.2.1",
 		"framer-motion": "^10.10.0",
 		"lucide-react": "^0.130.0",
-		"next": "canary",
-		"react": "next",
-		"react-dom": "next",
+		"next": "13.2.5-canary.29",
+		"react": "18.3.0-next-b14f8da15-20230403",
+		"react-dom": "18.3.0-next-b14f8da15-20230403",
 		"tailwind-merge": "^1.11.0",
 		"tailwindcss-animate": "^1.0.5"
 	},
