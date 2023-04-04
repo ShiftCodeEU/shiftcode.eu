@@ -3,6 +3,7 @@ import {
 	getShowcaseMetaData,
 	isShowcaseSlugValid
 } from "@/data/dataHelpers";
+import { availableShowcaseMeta } from "@/data/pageData";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
@@ -12,6 +13,14 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
 		description:
 			"These projects are just some of the interesting ones we've worked on. Feel free to have a look around!"
 	};
+};
+
+export const generateStaticParams = () => {
+	const showcases = availableShowcaseMeta;
+
+	return showcases.map((showcase) => ({
+		slug: showcase.slug
+	}));
 };
 
 const Showcase = ({ params }: { params: { slug: string } }) => {

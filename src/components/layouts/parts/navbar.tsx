@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import logo from "~/images/small-base_icon_transparent_background.webp";
+import logo from "~/images/small-icon.webp";
 import { NavigationMenuGeneric } from "../generics/navMenu";
 
 const Navbar = () => {

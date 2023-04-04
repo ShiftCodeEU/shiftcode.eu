@@ -1,4 +1,4 @@
-import Logo from "@/images/color2-white_logo_transparent_background.webp";
+import Logo from "@/images/color2-logo.webp";
 import Image from "next/image";
 
 export const metadata = {
@@ -37,7 +37,7 @@ const Home = () => {
 							>
 								Check out projects
 								<svg
-									className="ml-2 -mr-1 h-5 w-5"
+									className="-mr-1 ml-2 h-5 w-5"
 									fill="currentColor"
 									viewBox="0 0 20 20"
 									xmlns="http://www.w3.org/2000/svg"
