@@ -15,10 +15,4 @@ module.exports = {
 	tabWidth: 4,
 	trailingComma: "none",
 	useTabs: true,
-	overrides: [
-		{
-			files: "**/*.astro",
-			options: { parser: "astro" }
-		}
-	]
 };
