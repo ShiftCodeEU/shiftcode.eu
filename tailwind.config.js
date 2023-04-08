@@ -7,6 +7,8 @@ module.exports = {
 	// darkMode: ["class", '[data-theme="dark"]'],
 	content: [
 		"./src/**/*.{js,jsx,md,mdx,ts,tsx}",
+		"./src/app/**/*.{js,jsx,md,mdx,ts,tsx}",
+		"./src/components/**/*.{js,jsx,md,mdx,ts,tsx}",
 		"./node_modules/flowbite/**/*.js"
 	],
 	theme: {

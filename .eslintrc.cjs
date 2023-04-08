@@ -27,7 +27,7 @@ const config = {
 		],
 		"@next/next/no-html-link-for-pages": 0
 	},
-	ignorePatterns: ["tailwind.config.js", "next.config.mjs"]
+	ignorePatterns: ["tailwind.config.js", "next.config.mjs", ".next/*"]
 };
 
 module.exports = config;

@@ -36,5 +36,11 @@
 		"**/*.mjs",
 		".next/types/**/*.ts"
 	],
-	"exclude": ["node_modules", "tailwind.config.js"]
+	"exclude": [
+		"node_modules",
+		"tailwind.config.js",
+		".next",
+		"out",
+		".jampack"
+	]
 }

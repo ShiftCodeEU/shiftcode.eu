@@ -1,4 +1,3 @@
-import Logo from "@/images/color2-logo.webp";
 import Image from "next/image";
 
 export const metadata = {
@@ -16,11 +15,13 @@ const Home = () => {
 						<div className="mb-6 flex justify-center lg:hidden">
 							<Image
 								id="logo1"
-								src={Logo}
+								src={"/images/color2-logo.webp"}
 								placeholder="blur"
 								blurDataURL="|B98k^}^idofofofe.bFRQofj[ayayayj[j[f7ayS1NGH@I.IANFRjWBkVf*ayjZkCfPaeayj[jtH@NGMxafx[xHyCxatRofofWBV@fkozjZaefktkofjZo2tks:ozkCVtkCaeayozj[WBfkj@j[RjR*RPbGtQoLaeaeoz"
 								alt="Shiftcode Developments"
 								className="z-0 m-auto h-32 w-auto"
+								width={300}
+								height={300}
 							/>
 						</div>
 						<h2 className="mb-4 max-w-2xl text-3xl font-extrabold leading-none tracking-tight text-white md:text-5xl xl:text-6xl">
@@ -60,11 +61,13 @@ const Home = () => {
 					<div className="relative hidden justify-center lg:col-span-5 lg:flex">
 						<Image
 							id="logo1_alt"
-							src={Logo}
+							src={"/images/color2-logo.webp"}
 							placeholder="blur"
 							blurDataURL="|B98k^}^idofofofe.bFRQofj[ayayayj[j[f7ayS1NGH@I.IANFRjWBkVf*ayjZkCfPaeayj[jtH@NGMxafx[xHyCxatRofofWBV@fkozjZaefktkofjZo2tks:ozkCVtkCaeayozj[WBfkj@j[RjR*RPbGtQoLaeaeoz"
 							alt="Shiftcode Developments"
 							className="image-full absolute z-0 m-auto h-full w-auto transition-[filter] duration-500 ease-linear hover:hue-rotate-90"
+							width={200}
+							height={200}
 						/>
 					</div>
 				</div>

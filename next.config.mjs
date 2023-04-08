@@ -5,8 +5,10 @@ const config = {
 	compress: true,
 	experimental: {
 		appDir: true,
-	},
-	// output: "export"
+		typedRoutes: true
+	}
+	//output: "export",
+	// images: { unoptimized: true }
 	// compiler: {
 	// 	removeConsole: true
 	// },

@@ -6,6 +6,8 @@ import {
 import { availableShowcaseMeta } from "@/data/pageData";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
+import { setTimeout as setTimeoutAsync } from "timers/promises";
 
 export const generateMetadata = ({ params }: { params: { slug: string } }) => {
 	return {
@@ -23,7 +25,7 @@ export const generateStaticParams = () => {
 	}));
 };
 
-const Showcase = ({ params }: { params: { slug: string } }) => {
+const Showcase = async ({ params }: { params: { slug: string } }) => {
 	const slug = params.slug;
 	const pageData = getShowcaseMetaData(slug);
 
@@ -31,8 +33,20 @@ const Showcase = ({ params }: { params: { slug: string } }) => {
 		notFound();
 	}
 
+	const desktopImage = getPageImageByName(
+		pageData.images,
+		"showcase-desktop"
+	)?.path;
+
+	const mobileImage = getPageImageByName(
+		pageData.images,
+		"showcase-mobile"
+	)?.path;
+
+	await setTimeoutAsync(2000);
+
 	return (
-		<>
+		<Suspense>
 			<div className="hero py-14 lg:py-32">
 				<div className="hero-content text-center text-neutral-content">
 					<div className="max-w-md">
@@ -50,19 +64,15 @@ const Showcase = ({ params }: { params: { slug: string } }) => {
 			{pageData.images && pageData.images.length > 0 && (
 				<div id="showcase-mock" className="flex flex-col pb-16">
 					<h2 className="mb-5 text-center font-bold lg:text-2xl">
-						What does the{" "}
-						{` ${pageData.title.replace(" Showcase", "")} `} website
-						look like?
+						{`What does the ${pageData.title.replace(
+							" Showcase",
+							""
+						)} website look like?`}
 					</h2>
-					<div className="bg-base-400 bg-glass-black mockup-window hidden border border-accent lg:inline-block">
+					<div className="bg-base-400 bg-glass-black mockup-window mx-auto hidden max-w-[600px] border border-accent lg:inline-block">
 						<div className="bg-glass-black relative flex h-auto justify-center">
 							<Image
-								src={
-									getPageImageByName(
-										pageData.images,
-										"showcase-desktop"
-									)?.path
-								}
+								src={desktopImage}
 								height={600}
 								width={1200}
 								alt="showcase on desktop"
@@ -82,12 +92,7 @@ const Showcase = ({ params }: { params: { slug: string } }) => {
 								Hi.
 							</div> */}
 							<Image
-								src={
-									getPageImageByName(
-										pageData.images,
-										"showcase-mobile"
-									)?.path
-								}
+								src={mobileImage}
 								height={1200}
 								width={600}
 								style={{ width: "268px" }}
@@ -100,7 +105,7 @@ const Showcase = ({ params }: { params: { slug: string } }) => {
 					</div>
 				</div>
 			)}
-		</>
+		</Suspense>
 	);
 };
 

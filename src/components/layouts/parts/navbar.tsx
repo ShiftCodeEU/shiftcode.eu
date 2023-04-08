@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import logo from "~/images/small-icon.webp";
 import { NavigationMenuGeneric } from "../generics/navMenu";
 
 const Navbar = () => {
@@ -46,8 +45,9 @@ const Navbar = () => {
 				</div>
 				<a href="/" className="hidden lg:flex lg:pl-2">
 					<Image
-						src={logo}
+						src={"/images/small-icon.webp"}
 						placeholder="blur"
+						blurDataURL="https://placehold.co/1200x600/webp?text=Loading..."
 						alt="ShiftCode"
 						height={64}
 						width={84}
