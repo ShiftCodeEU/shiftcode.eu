@@ -1,13 +1,16 @@
+"use client";
+
 import {
 	getPageImageByName,
 	getShowcaseMetaData,
 	isShowcaseSlugValid
 } from "@/data/dataHelpers";
 import { availableShowcaseMeta } from "@/data/pageData";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
-import { setTimeout as setTimeoutAsync } from "timers/promises";
+const Loading = dynamic(() => import("./loading"), { ssr: false });
 
 export const generateMetadata = ({ params }: { params: { slug: string } }) => {
 	return {
@@ -25,7 +28,7 @@ export const generateStaticParams = () => {
 	}));
 };
 
-const Showcase = async ({ params }: { params: { slug: string } }) => {
+const Showcase = ({ params }: { params: { slug: string } }) => {
 	const slug = params.slug;
 	const pageData = getShowcaseMetaData(slug);
 
@@ -43,10 +46,8 @@ const Showcase = async ({ params }: { params: { slug: string } }) => {
 		"showcase-mobile"
 	)?.path;
 
-	await setTimeoutAsync(2000);
-
 	return (
-		<Suspense>
+		<Suspense fallback={<Loading />}>
 			<div className="hero py-14 lg:py-32">
 				<div className="hero-content text-center text-neutral-content">
 					<div className="max-w-md">
