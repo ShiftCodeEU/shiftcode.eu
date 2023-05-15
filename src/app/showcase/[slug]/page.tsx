@@ -8,7 +8,10 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
+
 const Loading = dynamic(() => import("./loading"), { ssr: false });
+
+export const revalidate = 2500;
 
 export const generateMetadata = ({ params }: { params: { slug: string } }) => {
 	return {

@@ -1,3 +1,9 @@
+import "@/styles/tailwind.css";
+
+import Footer from "@/components/layouts/parts/footer";
+import Navbar from "@/components/layouts/parts/navbar";
+import PageTransition from "@/components/layouts/parts/pageTransition";
+
 export const metadata = {
 	title: {
 		default: "ShiftCode Developments",
@@ -42,7 +48,11 @@ const Rootlayout = ({
 				<meta name="msapplication-TileColor" content="#000000" />
 			</head>
 			<body className="w-full pb-2">
-				<main className="min-h-screen">{children}</main>
+				<PageTransition>
+					<Navbar />
+					<main className="min-h-screen">{children}</main>
+					<Footer />
+				</PageTransition>
 			</body>
 		</html>
 	);
