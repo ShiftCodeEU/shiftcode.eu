@@ -13,7 +13,13 @@ export const getShowcaseMetaData = (slugString: string) => {
 			title: "Showcase",
 			description:
 				"These projects are just some of the interesting ones we've worked on. Feel free to have a look around!",
-			images: []
+			images: [],
+			sections: [
+				{
+					title: "",
+					content: ""
+				}
+			]
 		};
 	} else {
 		return getMData;
@@ -24,7 +30,6 @@ export const getPageImageByName = (
 	pageImages: {
 		imageName: string;
 		path: string;
-		blurHash: string;
 	}[],
 	imageName: string
 ) => {
@@ -39,8 +44,7 @@ export const getPageImageByName = (
 	} else {
 		return {
 			imageName: "undefined",
-			path: "",
-			blurHash: ""
+			path: ""
 		};
 	}
 };

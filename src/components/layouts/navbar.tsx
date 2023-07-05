@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { NavigationMenuGeneric } from "../generics/navMenu";
+import { NavigationMenuGeneric } from "./parts/navMenu";
 
 const Navbar = () => {
 	return (
@@ -30,7 +30,7 @@ const Navbar = () => {
 					</label>
 					<div
 						tabIndex={0}
-						className="dropdown-content menu rounded-box menu-compact mt-3 w-52 bg-base-100 p-2 shadow"
+						className="menu-compact dropdown-content menu rounded-box mt-3 w-52 bg-base-100 p-2 shadow"
 					>
 						<a className="btn-dark" href="#">
 							Item 1
@@ -46,11 +46,10 @@ const Navbar = () => {
 				<a href="/" className="hidden lg:flex lg:pl-2">
 					<Image
 						src={"/images/small-icon.webp"}
-						placeholder="blur"
-						blurDataURL="https://placehold.co/1200x600/webp?text=Loading..."
 						alt="ShiftCode"
 						height={64}
 						width={84}
+						priority
 					/>
 				</a>
 			</div>

@@ -34,7 +34,7 @@ const Home = () => {
 						<div className="flex flex-col gap-2 lg:flex-row">
 							<a
 								href="#"
-								className="inline-flex items-center justify-center rounded-lg border border-accentAlt bg-secondary px-5 py-3 text-center text-base font-medium text-accentAlt focus:ring-4 focus:ring-accentAlt hover:bg-accent"
+								className="inline-flex items-center justify-center rounded-lg border border-accentAlt bg-secondary px-5 py-3 text-center text-base font-medium text-accentAlt hover:bg-accent focus:ring-4 focus:ring-accentAlt"
 							>
 								Check out projects
 								<svg
@@ -52,7 +52,7 @@ const Home = () => {
 							</a>
 							<a
 								href="#"
-								className="inline-flex items-center justify-center rounded-lg border border-accentAlt bg-secondary px-5 py-3 text-center text-base font-medium text-accentAlt focus:ring-4 focus:ring-accentAlt hover:bg-accent"
+								className="inline-flex items-center justify-center rounded-lg border border-accentAlt bg-secondary px-5 py-3 text-center text-base font-medium text-accentAlt hover:bg-accent focus:ring-4 focus:ring-accentAlt"
 							>
 								Check our Github
 							</a>

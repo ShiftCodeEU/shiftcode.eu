@@ -1,8 +1,7 @@
 import "@/styles/tailwind.css";
 
-import Footer from "@/components/layouts/parts/footer";
-import Navbar from "@/components/layouts/parts/navbar";
-import PageTransition from "@/components/layouts/parts/pageTransition";
+import Footer from "@/components/layouts/footer";
+import Navbar from "@/components/layouts/navbar";
 
 export const metadata = {
 	title: {
@@ -47,12 +46,10 @@ const Rootlayout = ({
 
 				<meta name="msapplication-TileColor" content="#000000" />
 			</head>
-			<body className="w-full pb-2">
-				<PageTransition>
-					<Navbar />
-					<main className="min-h-screen">{children}</main>
-					<Footer />
-				</PageTransition>
+			<body className="w-full px-2">
+				<Navbar />
+				<main className="min-h-screen">{children}</main>
+				<Footer />
 			</body>
 		</html>
 	);

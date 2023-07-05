@@ -15,24 +15,11 @@ import {
 import { cn } from "@/lib/cn";
 
 const navItems: { title: string; href: string; description: string }[] = [
-	// {
-	// 	title: "Alert Dialog",
-	// 	href: "/showcase",
-	// 	description:
-	// 		"A modal dialog that interrupts the user with important content and expects a response."
-	// },
-	// {
-	// 	title: "Hover Card",
-	// 	href: "/showcase",
-	// 	description:
-	// 		"For sighted users to preview content available behind a link."
-	// },
-	// {
-	// 	title: "Progress",
-	// 	href: "/showcase",
-	// 	description:
-	// 		"Displays an indicator showing the completion progress of a task, typically displayed as a progress bar."
-	// },
+	{
+		title: "Show all",
+		href: "/showcase",
+		description: "Click here to view all showcases!"
+	},
 	{
 		title: "HardwareHulp",
 		href: "/showcase/hardwarehulp",
@@ -69,7 +56,7 @@ export const NavigationMenuGeneric = () => {
 										className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-accent to-accentAlt p-6 no-underline outline-none focus:shadow-md"
 										href="/"
 									>
-										<div className="mt-4 mb-2 text-lg font-medium text-white">
+										<div className="mb-2 mt-4 text-lg font-medium text-white">
 											ShiftCode
 										</div>
 										<p className="text-sm leading-tight text-white/90">
@@ -145,7 +132,7 @@ const ListItem = React.forwardRef<
 				<a
 					ref={ref}
 					className={cn(
-						"block select-none space-y-1 rounded-md p-3 leading-none text-white no-underline outline-none transition-colors focus:bg-accent hover:bg-secondary hover:text-accentAlt",
+						"block select-none space-y-1 rounded-md p-3 leading-none text-white no-underline outline-none transition-colors hover:bg-secondary hover:text-accentAlt focus:bg-accent",
 						className
 					)}
 					{...props}
